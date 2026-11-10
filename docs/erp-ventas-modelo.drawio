@@ -1,0 +1,1386 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<mxfile host="app.diagrams.net" compressed="false">
+  <diagram id="erp-ventas-modelo" name="Modelo de datos">
+    <mxGraphModel dx="1406" dy="780" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2170" pageHeight="1480" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="eyebrow" connectable="0" parent="1" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=12;fontColor=#50677D;fontStyle=1;" value="DISEÑO DE BASE DE DATOS  /  SQL SERVER" vertex="1">
+          <mxGeometry height="20" width="520" x="52" y="29" as="geometry"/>
+        </mxCell>
+        <mxCell id="title" connectable="0" parent="1" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=34;fontColor=#162C43;fontStyle=1;" value="ERP de ventas" vertex="1">
+          <mxGeometry height="45" width="670" x="52" y="53" as="geometry"/>
+        </mxCell>
+        <mxCell id="legend_bg_0" connectable="0" parent="1" style="rounded=1;absoluteArcSize=1;arcSize=11;html=1;fillColor=#DCEBFF;strokeColor=none;strokeWidth=1.3;" value="" vertex="1">
+          <mxGeometry height="29" width="98" x="1652" y="64" as="geometry"/>
+        </mxCell>
+        <mxCell id="legend_0" connectable="0" parent="1" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=12;fontColor=#28559A;fontStyle=1;" value="PK  primaria" vertex="1">
+          <mxGeometry height="29" width="98" x="1652" y="64" as="geometry"/>
+        </mxCell>
+        <mxCell id="legend_bg_1" connectable="0" parent="1" style="rounded=1;absoluteArcSize=1;arcSize=11;html=1;fillColor=#DDF1EA;strokeColor=none;strokeWidth=1.3;" value="" vertex="1">
+          <mxGeometry height="29" width="99" x="1761" y="64" as="geometry"/>
+        </mxCell>
+        <mxCell id="legend_1" connectable="0" parent="1" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=12;fontColor=#246450;fontStyle=1;" value="FK  foránea" vertex="1">
+          <mxGeometry height="29" width="99" x="1761" y="64" as="geometry"/>
+        </mxCell>
+        <mxCell id="legend_bg_2" connectable="0" parent="1" style="rounded=1;absoluteArcSize=1;arcSize=11;html=1;fillColor=#EDE6FA;strokeColor=none;strokeWidth=1.3;" value="" vertex="1">
+          <mxGeometry height="29" width="95" x="1871" y="64" as="geometry"/>
+        </mxCell>
+        <mxCell id="legend_2" connectable="0" parent="1" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=12;fontColor=#58447D;fontStyle=1;" value="UQ  única" vertex="1">
+          <mxGeometry height="29" width="95" x="1871" y="64" as="geometry"/>
+        </mxCell>
+        <mxCell id="legend_bg_3" connectable="0" parent="1" style="rounded=1;absoluteArcSize=1;arcSize=11;html=1;fillColor=#E7EEF6;strokeColor=none;strokeWidth=1.3;" value="" vertex="1">
+          <mxGeometry height="29" width="104" x="1977" y="64" as="geometry"/>
+        </mxCell>
+        <mxCell id="legend_3" connectable="0" parent="1" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=12;fontColor=#50677D;fontStyle=1;" value="?  admite nulo" vertex="1">
+          <mxGeometry height="29" width="104" x="1977" y="64" as="geometry"/>
+        </mxCell>
+        <mxCell id="section_0" connectable="0" parent="1" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=13;fontColor=#39496D;fontStyle=1;" value="ACCESO" vertex="1">
+          <mxGeometry height="20" width="270" x="52" y="150" as="geometry"/>
+        </mxCell>
+        <mxCell id="section_1" connectable="0" parent="1" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=13;fontColor=#245C5B;fontStyle=1;" value="MAESTROS" vertex="1">
+          <mxGeometry height="20" width="270" x="448" y="150" as="geometry"/>
+        </mxCell>
+        <mxCell id="section_2" connectable="0" parent="1" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=13;fontColor=#223D61;fontStyle=1;" value="OPERACIÓN DE VENTA" vertex="1">
+          <mxGeometry height="20" width="270" x="844" y="150" as="geometry"/>
+        </mxCell>
+        <mxCell id="section_3" connectable="0" parent="1" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=13;fontColor=#594678;fontStyle=1;" value="COMPROBANTES Y COBROS" vertex="1">
+          <mxGeometry height="20" width="270" x="1270" y="150" as="geometry"/>
+        </mxCell>
+        <mxCell id="section_4" connectable="0" parent="1" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=13;fontColor=#21587B;fontStyle=1;" value="DESPACHO" vertex="1">
+          <mxGeometry height="20" width="270" x="1724" y="150" as="geometry"/>
+        </mxCell>
+        <mxCell id="ROL" parent="1" style="rounded=1;absoluteArcSize=1;arcSize=11;html=1;fillColor=#FFFFFF;strokeColor=#CCD8E5;strokeWidth=1.3;container=1;collapsible=0;recursiveResize=0;" value="" vertex="1">
+          <mxGeometry height="152" width="318" x="52" y="211" as="geometry"/>
+        </mxCell>
+        <mxCell id="ROL_header" connectable="0" parent="ROL" style="rounded=1;absoluteArcSize=1;arcSize=11;html=1;fillColor=#39496D;strokeColor=none;strokeWidth=1.3;" value="" vertex="1">
+          <mxGeometry height="35" width="312" x="3" y="3" as="geometry"/>
+        </mxCell>
+        <mxCell id="ROL_title" connectable="0" parent="ROL" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=17;fontColor=#FFFFFF;fontStyle=1;" value="ROL" vertex="1">
+          <mxGeometry height="35" width="288" x="15" y="3" as="geometry"/>
+        </mxCell>
+        <mxCell id="ROL_row_0_stripe" connectable="0" parent="ROL" style="rounded=1;absoluteArcSize=1;arcSize=11;html=1;fillColor=#F4F7FB;strokeColor=none;strokeWidth=1.3;selectable=0;editable=0;movable=0;" value="" vertex="1">
+          <mxGeometry height="24" width="304" x="7" y="41" as="geometry"/>
+        </mxCell>
+        <mxCell id="ROL_row_0_key" connectable="0" parent="ROL" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=11;fontColor=#28559A;fontStyle=1;" value="PK" vertex="1">
+          <mxGeometry height="25" width="46" x="11" y="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="ROL_row_0_field" connectable="0" parent="ROL" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Consolas;fontSize=13;fontColor=#162C43;fontStyle=0;" value="rol_id" vertex="1">
+          <mxGeometry height="25" width="148" x="63" y="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="ROL_row_0_type" connectable="0" parent="ROL" style="text;html=1;align=right;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=12;fontColor=#50677D;fontStyle=0;" value="tinyint" vertex="1">
+          <mxGeometry height="25" width="96" x="206" y="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="ROL_row_1_key" connectable="0" parent="ROL" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=11;fontColor=#694A89;fontStyle=1;" value="UQ" vertex="1">
+          <mxGeometry height="25" width="46" x="11" y="65" as="geometry"/>
+        </mxCell>
+        <mxCell id="ROL_row_1_field" connectable="0" parent="ROL" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Consolas;fontSize=13;fontColor=#162C43;fontStyle=0;" value="codigo" vertex="1">
+          <mxGeometry height="25" width="148" x="63" y="65" as="geometry"/>
+        </mxCell>
+        <mxCell id="ROL_row_1_type" connectable="0" parent="ROL" style="text;html=1;align=right;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=12;fontColor=#50677D;fontStyle=0;" value="varchar(24)" vertex="1">
+          <mxGeometry height="25" width="96" x="206" y="65" as="geometry"/>
+        </mxCell>
+        <mxCell id="ROL_row_2_stripe" connectable="0" parent="ROL" style="rounded=1;absoluteArcSize=1;arcSize=11;html=1;fillColor=#F4F7FB;strokeColor=none;strokeWidth=1.3;selectable=0;editable=0;movable=0;" value="" vertex="1">
+          <mxGeometry height="24" width="304" x="7" y="91" as="geometry"/>
+        </mxCell>
+        <mxCell id="ROL_row_2_field" connectable="0" parent="ROL" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Consolas;fontSize=13;fontColor=#162C43;fontStyle=0;" value="nombre" vertex="1">
+          <mxGeometry height="25" width="148" x="63" y="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="ROL_row_2_type" connectable="0" parent="ROL" style="text;html=1;align=right;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=12;fontColor=#50677D;fontStyle=0;" value="nvarchar(60)" vertex="1">
+          <mxGeometry height="25" width="96" x="206" y="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="ROL_rule_bg" connectable="0" parent="ROL" style="rounded=1;absoluteArcSize=1;arcSize=11;html=1;fillColor=#EAF0F7;strokeColor=none;strokeWidth=1.3;" value="" vertex="1">
+          <mxGeometry height="23" width="304" x="7" y="119" as="geometry"/>
+        </mxCell>
+        <mxCell id="ROL_rule" connectable="0" parent="ROL" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=11;fontColor=#50677D;fontStyle=1;" value="Administrador · Vendedor" vertex="1">
+          <mxGeometry height="23" width="288" x="15" y="119" as="geometry"/>
+        </mxCell>
+        <mxCell id="USUARIO" parent="1" style="rounded=1;absoluteArcSize=1;arcSize=11;html=1;fillColor=#FFFFFF;strokeColor=#CCD8E5;strokeWidth=1.3;container=1;collapsible=0;recursiveResize=0;" value="" vertex="1">
+          <mxGeometry height="227" width="318" x="52" y="461" as="geometry"/>
+        </mxCell>
+        <mxCell id="USUARIO_header" connectable="0" parent="USUARIO" style="rounded=1;absoluteArcSize=1;arcSize=11;html=1;fillColor=#39496D;strokeColor=none;strokeWidth=1.3;" value="" vertex="1">
+          <mxGeometry height="35" width="312" x="3" y="3" as="geometry"/>
+        </mxCell>
+        <mxCell id="USUARIO_title" connectable="0" parent="USUARIO" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=17;fontColor=#FFFFFF;fontStyle=1;" value="USUARIO" vertex="1">
+          <mxGeometry height="35" width="288" x="15" y="3" as="geometry"/>
+        </mxCell>
+        <mxCell id="USUARIO_row_0_stripe" connectable="0" parent="USUARIO" style="rounded=1;absoluteArcSize=1;arcSize=11;html=1;fillColor=#F4F7FB;strokeColor=none;strokeWidth=1.3;selectable=0;editable=0;movable=0;" value="" vertex="1">
+          <mxGeometry height="24" width="304" x="7" y="41" as="geometry"/>
+        </mxCell>
+        <mxCell id="USUARIO_row_0_key" connectable="0" parent="USUARIO" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=11;fontColor=#28559A;fontStyle=1;" value="PK" vertex="1">
+          <mxGeometry height="25" width="46" x="11" y="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="USUARIO_row_0_field" connectable="0" parent="USUARIO" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Consolas;fontSize=13;fontColor=#162C43;fontStyle=0;" value="usuario_id" vertex="1">
+          <mxGeometry height="25" width="148" x="63" y="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="USUARIO_row_0_type" connectable="0" parent="USUARIO" style="text;html=1;align=right;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=12;fontColor=#50677D;fontStyle=0;" value="int" vertex="1">
+          <mxGeometry height="25" width="96" x="206" y="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="USUARIO_row_1_key" connectable="0" parent="USUARIO" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=11;fontColor=#694A89;fontStyle=1;" value="UQ" vertex="1">
+          <mxGeometry height="25" width="46" x="11" y="65" as="geometry"/>
+        </mxCell>
+        <mxCell id="USUARIO_row_1_field" connectable="0" parent="USUARIO" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Consolas;fontSize=13;fontColor=#162C43;fontStyle=0;" value="nombre_usuario" vertex="1">
+          <mxGeometry height="25" width="148" x="63" y="65" as="geometry"/>
+        </mxCell>
+        <mxCell id="USUARIO_row_1_type" connectable="0" parent="USUARIO" style="text;html=1;align=right;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=12;fontColor=#50677D;fontStyle=0;" value="nvarchar(100)" vertex="1">
+          <mxGeometry height="25" width="96" x="206" y="65" as="geometry"/>
+        </mxCell>
+        <mxCell id="USUARIO_row_2_stripe" connectable="0" parent="USUARIO" style="rounded=1;absoluteArcSize=1;arcSize=11;html=1;fillColor=#F4F7FB;strokeColor=none;strokeWidth=1.3;selectable=0;editable=0;movable=0;" value="" vertex="1">
+          <mxGeometry height="24" width="304" x="7" y="91" as="geometry"/>
+        </mxCell>
+        <mxCell id="USUARIO_row_2_field" connectable="0" parent="USUARIO" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Consolas;fontSize=13;fontColor=#162C43;fontStyle=0;" value="password_hash" vertex="1">
+          <mxGeometry height="25" width="148" x="63" y="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="USUARIO_row_2_type" connectable="0" parent="USUARIO" style="text;html=1;align=right;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=12;fontColor=#50677D;fontStyle=0;" value="varchar(255)" vertex="1">
+          <mxGeometry height="25" width="96" x="206" y="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="USUARIO_row_3_key" connectable="0" parent="USUARIO" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=11;fontColor=#246450;fontStyle=1;" value="FK" vertex="1">
+          <mxGeometry height="25" width="46" x="11" y="115" as="geometry"/>
+        </mxCell>
+        <mxCell id="USUARIO_row_3_field" connectable="0" parent="USUARIO" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Consolas;fontSize=13;fontColor=#162C43;fontStyle=0;" value="rol_id" vertex="1">
+          <mxGeometry height="25" width="148" x="63" y="115" as="geometry"/>
+        </mxCell>
+        <mxCell id="USUARIO_row_3_type" connectable="0" parent="USUARIO" style="text;html=1;align=right;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=12;fontColor=#50677D;fontStyle=0;" value="tinyint" vertex="1">
+          <mxGeometry height="25" width="96" x="206" y="115" as="geometry"/>
+        </mxCell>
+        <mxCell id="USUARIO_row_4_stripe" connectable="0" parent="USUARIO" style="rounded=1;absoluteArcSize=1;arcSize=11;html=1;fillColor=#F4F7FB;strokeColor=none;strokeWidth=1.3;selectable=0;editable=0;movable=0;" value="" vertex="1">
+          <mxGeometry height="24" width="304" x="7" y="141" as="geometry"/>
+        </mxCell>
+        <mxCell id="USUARIO_row_4_field" connectable="0" parent="USUARIO" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Consolas;fontSize=13;fontColor=#162C43;fontStyle=0;" value="nombre" vertex="1">
+          <mxGeometry height="25" width="148" x="63" y="140" as="geometry"/>
+        </mxCell>
+        <mxCell id="USUARIO_row_4_type" connectable="0" parent="USUARIO" style="text;html=1;align=right;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=12;fontColor=#50677D;fontStyle=0;" value="nvarchar(120)" vertex="1">
+          <mxGeometry height="25" width="96" x="206" y="140" as="geometry"/>
+        </mxCell>
+        <mxCell id="USUARIO_row_5_field" connectable="0" parent="USUARIO" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Consolas;fontSize=13;fontColor=#162C43;fontStyle=0;" value="activo" vertex="1">
+          <mxGeometry height="25" width="148" x="63" y="165" as="geometry"/>
+        </mxCell>
+        <mxCell id="USUARIO_row_5_type" connectable="0" parent="USUARIO" style="text;html=1;align=right;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=12;fontColor=#50677D;fontStyle=0;" value="bit" vertex="1">
+          <mxGeometry height="25" width="96" x="206" y="165" as="geometry"/>
+        </mxCell>
+        <mxCell id="USUARIO_rule_bg" connectable="0" parent="USUARIO" style="rounded=1;absoluteArcSize=1;arcSize=11;html=1;fillColor=#EAF0F7;strokeColor=none;strokeWidth=1.3;" value="" vertex="1">
+          <mxGeometry height="23" width="304" x="7" y="194" as="geometry"/>
+        </mxCell>
+        <mxCell id="USUARIO_rule" connectable="0" parent="USUARIO" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=11;fontColor=#50677D;fontStyle=1;" value="Solo el rol Vendedor registra ventas" vertex="1">
+          <mxGeometry height="23" width="288" x="15" y="194" as="geometry"/>
+        </mxCell>
+        <mxCell id="CLIENTE" parent="1" style="rounded=1;absoluteArcSize=1;arcSize=11;html=1;fillColor=#FFFFFF;strokeColor=#CCD8E5;strokeWidth=1.3;container=1;collapsible=0;recursiveResize=0;" value="" vertex="1">
+          <mxGeometry height="227" width="318" x="448" y="212" as="geometry"/>
+        </mxCell>
+        <mxCell id="CLIENTE_header" connectable="0" parent="CLIENTE" style="rounded=1;absoluteArcSize=1;arcSize=11;html=1;fillColor=#245C5B;strokeColor=none;strokeWidth=1.3;" value="" vertex="1">
+          <mxGeometry height="35" width="312" x="3" y="3" as="geometry"/>
+        </mxCell>
+        <mxCell id="CLIENTE_title" connectable="0" parent="CLIENTE" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=17;fontColor=#FFFFFF;fontStyle=1;" value="CLIENTE" vertex="1">
+          <mxGeometry height="35" width="288" x="15" y="3" as="geometry"/>
+        </mxCell>
+        <mxCell id="CLIENTE_row_0_stripe" connectable="0" parent="CLIENTE" style="rounded=1;absoluteArcSize=1;arcSize=11;html=1;fillColor=#F4F7FB;strokeColor=none;strokeWidth=1.3;selectable=0;editable=0;movable=0;" value="" vertex="1">
+          <mxGeometry height="24" width="304" x="7" y="41" as="geometry"/>
+        </mxCell>
+        <mxCell id="CLIENTE_row_0_key" connectable="0" parent="CLIENTE" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=11;fontColor=#28559A;fontStyle=1;" value="PK" vertex="1">
+          <mxGeometry height="25" width="46" x="11" y="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="CLIENTE_row_0_field" connectable="0" parent="CLIENTE" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Consolas;fontSize=13;fontColor=#162C43;fontStyle=0;" value="cliente_id" vertex="1">
+          <mxGeometry height="25" width="148" x="63" y="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="CLIENTE_row_0_type" connectable="0" parent="CLIENTE" style="text;html=1;align=right;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=12;fontColor=#50677D;fontStyle=0;" value="int" vertex="1">
+          <mxGeometry height="25" width="96" x="206" y="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="CLIENTE_row_1_field" connectable="0" parent="CLIENTE" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Consolas;fontSize=13;fontColor=#162C43;fontStyle=0;" value="tipo_documento" vertex="1">
+          <mxGeometry height="25" width="148" x="63" y="65" as="geometry"/>
+        </mxCell>
+        <mxCell id="CLIENTE_row_1_type" connectable="0" parent="CLIENTE" style="text;html=1;align=right;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=12;fontColor=#50677D;fontStyle=0;" value="char(1)" vertex="1">
+          <mxGeometry height="25" width="96" x="206" y="65" as="geometry"/>
+        </mxCell>
+        <mxCell id="CLIENTE_row_2_stripe" connectable="0" parent="CLIENTE" style="rounded=1;absoluteArcSize=1;arcSize=11;html=1;fillColor=#F4F7FB;strokeColor=none;strokeWidth=1.3;selectable=0;editable=0;movable=0;" value="" vertex="1">
+          <mxGeometry height="24" width="304" x="7" y="91" as="geometry"/>
+        </mxCell>
+        <mxCell id="CLIENTE_row_2_field" connectable="0" parent="CLIENTE" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Consolas;fontSize=13;fontColor=#162C43;fontStyle=0;" value="numero_documento" vertex="1">
+          <mxGeometry height="25" width="148" x="63" y="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="CLIENTE_row_2_type" connectable="0" parent="CLIENTE" style="text;html=1;align=right;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=12;fontColor=#50677D;fontStyle=0;" value="varchar(12)" vertex="1">
+          <mxGeometry height="25" width="96" x="206" y="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="CLIENTE_row_3_field" connectable="0" parent="CLIENTE" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Consolas;fontSize=13;fontColor=#162C43;fontStyle=0;" value="nombre" vertex="1">
+          <mxGeometry height="25" width="148" x="63" y="115" as="geometry"/>
+        </mxCell>
+        <mxCell id="CLIENTE_row_3_type" connectable="0" parent="CLIENTE" style="text;html=1;align=right;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=12;fontColor=#50677D;fontStyle=0;" value="nvarchar(160)" vertex="1">
+          <mxGeometry height="25" width="96" x="206" y="115" as="geometry"/>
+        </mxCell>
+        <mxCell id="CLIENTE_row_4_stripe" connectable="0" parent="CLIENTE" style="rounded=1;absoluteArcSize=1;arcSize=11;html=1;fillColor=#F4F7FB;strokeColor=none;strokeWidth=1.3;selectable=0;editable=0;movable=0;" value="" vertex="1">
+          <mxGeometry height="24" width="304" x="7" y="141" as="geometry"/>
+        </mxCell>
+        <mxCell id="CLIENTE_row_4_field" connectable="0" parent="CLIENTE" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Consolas;fontSize=13;fontColor=#162C43;fontStyle=0;" value="origen_datos" vertex="1">
+          <mxGeometry height="25" width="148" x="63" y="140" as="geometry"/>
+        </mxCell>
+        <mxCell id="CLIENTE_row_4_type" connectable="0" parent="CLIENTE" style="text;html=1;align=right;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=12;fontColor=#50677D;fontStyle=0;" value="varchar(12)" vertex="1">
+          <mxGeometry height="25" width="96" x="206" y="140" as="geometry"/>
+        </mxCell>
+        <mxCell id="CLIENTE_row_5_field" connectable="0" parent="CLIENTE" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Consolas;fontSize=13;fontColor=#162C43;fontStyle=0;" value="consultado_en" vertex="1">
+          <mxGeometry height="25" width="148" x="63" y="165" as="geometry"/>
+        </mxCell>
+        <mxCell id="CLIENTE_row_5_type" connectable="0" parent="CLIENTE" style="text;html=1;align=right;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=12;fontColor=#50677D;fontStyle=0;" value="datetime2?" vertex="1">
+          <mxGeometry height="25" width="96" x="206" y="165" as="geometry"/>
+        </mxCell>
+        <mxCell id="CLIENTE_rule_bg" connectable="0" parent="CLIENTE" style="rounded=1;absoluteArcSize=1;arcSize=11;html=1;fillColor=#EAF0F7;strokeColor=none;strokeWidth=1.3;" value="" vertex="1">
+          <mxGeometry height="23" width="304" x="7" y="194" as="geometry"/>
+        </mxCell>
+        <mxCell id="CLIENTE_rule" connectable="0" parent="CLIENTE" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=11;fontColor=#50677D;fontStyle=1;" value="UQ · tipo_documento + numero_documento" vertex="1">
+          <mxGeometry height="23" width="288" x="15" y="194" as="geometry"/>
+        </mxCell>
+        <mxCell id="VENDEDOR" parent="1" style="rounded=1;absoluteArcSize=1;arcSize=11;html=1;fillColor=#FFFFFF;strokeColor=#CCD8E5;strokeWidth=1.3;container=1;collapsible=0;recursiveResize=0;" value="" vertex="1">
+          <mxGeometry height="150" width="318" x="448" y="507" as="geometry"/>
+        </mxCell>
+        <mxCell id="VENDEDOR_header" connectable="0" parent="VENDEDOR" style="rounded=1;absoluteArcSize=1;arcSize=11;html=1;fillColor=#245C5B;strokeColor=none;strokeWidth=1.3;" value="" vertex="1">
+          <mxGeometry height="35" width="312" x="3" y="3" as="geometry"/>
+        </mxCell>
+        <mxCell id="VENDEDOR_title" connectable="0" parent="VENDEDOR" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=17;fontColor=#FFFFFF;fontStyle=1;" value="VENDEDOR" vertex="1">
+          <mxGeometry height="35" width="288" x="15" y="3" as="geometry"/>
+        </mxCell>
+        <mxCell id="VENDEDOR_row_0_stripe" connectable="0" parent="VENDEDOR" style="rounded=1;absoluteArcSize=1;arcSize=11;html=1;fillColor=#F4F7FB;strokeColor=none;strokeWidth=1.3;selectable=0;editable=0;movable=0;" value="" vertex="1">
+          <mxGeometry height="24" width="304" x="7" y="41" as="geometry"/>
+        </mxCell>
+        <mxCell id="VENDEDOR_row_0_key" connectable="0" parent="VENDEDOR" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=11;fontColor=#28559A;fontStyle=1;" value="PK" vertex="1">
+          <mxGeometry height="25" width="46" x="11" y="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="VENDEDOR_row_0_field" connectable="0" parent="VENDEDOR" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Consolas;fontSize=13;fontColor=#162C43;fontStyle=0;" value="vendedor_id" vertex="1">
+          <mxGeometry height="25" width="148" x="63" y="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="VENDEDOR_row_0_type" connectable="0" parent="VENDEDOR" style="text;html=1;align=right;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=12;fontColor=#50677D;fontStyle=0;" value="int" vertex="1">
+          <mxGeometry height="25" width="96" x="206" y="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="VENDEDOR_row_1_key" connectable="0" parent="VENDEDOR" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=11;fontColor=#246450;fontStyle=1;" value="FK UQ" vertex="1">
+          <mxGeometry height="25" width="46" x="11" y="65" as="geometry"/>
+        </mxCell>
+        <mxCell id="VENDEDOR_row_1_field" connectable="0" parent="VENDEDOR" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Consolas;fontSize=13;fontColor=#162C43;fontStyle=0;" value="usuario_id" vertex="1">
+          <mxGeometry height="25" width="148" x="63" y="65" as="geometry"/>
+        </mxCell>
+        <mxCell id="VENDEDOR_row_1_type" connectable="0" parent="VENDEDOR" style="text;html=1;align=right;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=12;fontColor=#50677D;fontStyle=0;" value="int" vertex="1">
+          <mxGeometry height="25" width="96" x="206" y="65" as="geometry"/>
+        </mxCell>
+        <mxCell id="VENDEDOR_row_2_stripe" connectable="0" parent="VENDEDOR" style="rounded=1;absoluteArcSize=1;arcSize=11;html=1;fillColor=#F4F7FB;strokeColor=none;strokeWidth=1.3;selectable=0;editable=0;movable=0;" value="" vertex="1">
+          <mxGeometry height="24" width="304" x="7" y="91" as="geometry"/>
+        </mxCell>
+        <mxCell id="VENDEDOR_row_2_key" connectable="0" parent="VENDEDOR" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=11;fontColor=#694A89;fontStyle=1;" value="UQ" vertex="1">
+          <mxGeometry height="25" width="46" x="11" y="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="VENDEDOR_row_2_field" connectable="0" parent="VENDEDOR" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Consolas;fontSize=13;fontColor=#162C43;fontStyle=0;" value="codigo_vendedor" vertex="1">
+          <mxGeometry height="25" width="148" x="63" y="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="VENDEDOR_row_2_type" connectable="0" parent="VENDEDOR" style="text;html=1;align=right;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=12;fontColor=#50677D;fontStyle=0;" value="varchar(24)" vertex="1">
+          <mxGeometry height="25" width="96" x="206" y="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="VENDEDOR_row_3_field" connectable="0" parent="VENDEDOR" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Consolas;fontSize=13;fontColor=#162C43;fontStyle=0;" value="zona_ventas" vertex="1">
+          <mxGeometry height="25" width="148" x="63" y="115" as="geometry"/>
+        </mxCell>
+        <mxCell id="VENDEDOR_row_3_type" connectable="0" parent="VENDEDOR" style="text;html=1;align=right;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=12;fontColor=#50677D;fontStyle=0;" value="nvarchar(80)" vertex="1">
+          <mxGeometry height="25" width="96" x="206" y="115" as="geometry"/>
+        </mxCell>
+        <mxCell id="PRODUCTO" parent="1" style="rounded=1;absoluteArcSize=1;arcSize=11;html=1;fillColor=#FFFFFF;strokeColor=#CCD8E5;strokeWidth=1.3;container=1;collapsible=0;recursiveResize=0;" value="" vertex="1">
+          <mxGeometry height="175" width="318" x="448" y="787" as="geometry"/>
+        </mxCell>
+        <mxCell id="PRODUCTO_header" connectable="0" parent="PRODUCTO" style="rounded=1;absoluteArcSize=1;arcSize=11;html=1;fillColor=#245C5B;strokeColor=none;strokeWidth=1.3;" value="" vertex="1">
+          <mxGeometry height="35" width="312" x="3" y="3" as="geometry"/>
+        </mxCell>
+        <mxCell id="PRODUCTO_title" connectable="0" parent="PRODUCTO" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=17;fontColor=#FFFFFF;fontStyle=1;" value="PRODUCTO" vertex="1">
+          <mxGeometry height="35" width="288" x="15" y="3" as="geometry"/>
+        </mxCell>
+        <mxCell id="PRODUCTO_row_0_stripe" connectable="0" parent="PRODUCTO" style="rounded=1;absoluteArcSize=1;arcSize=11;html=1;fillColor=#F4F7FB;strokeColor=none;strokeWidth=1.3;selectable=0;editable=0;movable=0;" value="" vertex="1">
+          <mxGeometry height="24" width="304" x="7" y="41" as="geometry"/>
+        </mxCell>
+        <mxCell id="PRODUCTO_row_0_key" connectable="0" parent="PRODUCTO" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=11;fontColor=#28559A;fontStyle=1;" value="PK" vertex="1">
+          <mxGeometry height="25" width="46" x="11" y="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="PRODUCTO_row_0_field" connectable="0" parent="PRODUCTO" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Consolas;fontSize=13;fontColor=#162C43;fontStyle=0;" value="producto_id" vertex="1">
+          <mxGeometry height="25" width="148" x="63" y="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="PRODUCTO_row_0_type" connectable="0" parent="PRODUCTO" style="text;html=1;align=right;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=12;fontColor=#50677D;fontStyle=0;" value="int" vertex="1">
+          <mxGeometry height="25" width="96" x="206" y="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="PRODUCTO_row_1_key" connectable="0" parent="PRODUCTO" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=11;fontColor=#694A89;fontStyle=1;" value="UQ" vertex="1">
+          <mxGeometry height="25" width="46" x="11" y="65" as="geometry"/>
+        </mxCell>
+        <mxCell id="PRODUCTO_row_1_field" connectable="0" parent="PRODUCTO" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Consolas;fontSize=13;fontColor=#162C43;fontStyle=0;" value="sku" vertex="1">
+          <mxGeometry height="25" width="148" x="63" y="65" as="geometry"/>
+        </mxCell>
+        <mxCell id="PRODUCTO_row_1_type" connectable="0" parent="PRODUCTO" style="text;html=1;align=right;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=12;fontColor=#50677D;fontStyle=0;" value="varchar(32)" vertex="1">
+          <mxGeometry height="25" width="96" x="206" y="65" as="geometry"/>
+        </mxCell>
+        <mxCell id="PRODUCTO_row_2_stripe" connectable="0" parent="PRODUCTO" style="rounded=1;absoluteArcSize=1;arcSize=11;html=1;fillColor=#F4F7FB;strokeColor=none;strokeWidth=1.3;selectable=0;editable=0;movable=0;" value="" vertex="1">
+          <mxGeometry height="24" width="304" x="7" y="91" as="geometry"/>
+        </mxCell>
+        <mxCell id="PRODUCTO_row_2_field" connectable="0" parent="PRODUCTO" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Consolas;fontSize=13;fontColor=#162C43;fontStyle=0;" value="nombre" vertex="1">
+          <mxGeometry height="25" width="148" x="63" y="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="PRODUCTO_row_2_type" connectable="0" parent="PRODUCTO" style="text;html=1;align=right;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=12;fontColor=#50677D;fontStyle=0;" value="nvarchar(120)" vertex="1">
+          <mxGeometry height="25" width="96" x="206" y="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="PRODUCTO_row_3_field" connectable="0" parent="PRODUCTO" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Consolas;fontSize=13;fontColor=#162C43;fontStyle=0;" value="precio_venta" vertex="1">
+          <mxGeometry height="25" width="148" x="63" y="115" as="geometry"/>
+        </mxCell>
+        <mxCell id="PRODUCTO_row_3_type" connectable="0" parent="PRODUCTO" style="text;html=1;align=right;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=12;fontColor=#50677D;fontStyle=0;" value="decimal(12,2)" vertex="1">
+          <mxGeometry height="25" width="96" x="206" y="115" as="geometry"/>
+        </mxCell>
+        <mxCell id="PRODUCTO_row_4_stripe" connectable="0" parent="PRODUCTO" style="rounded=1;absoluteArcSize=1;arcSize=11;html=1;fillColor=#F4F7FB;strokeColor=none;strokeWidth=1.3;selectable=0;editable=0;movable=0;" value="" vertex="1">
+          <mxGeometry height="24" width="304" x="7" y="141" as="geometry"/>
+        </mxCell>
+        <mxCell id="PRODUCTO_row_4_field" connectable="0" parent="PRODUCTO" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Consolas;fontSize=13;fontColor=#162C43;fontStyle=0;" value="activo" vertex="1">
+          <mxGeometry height="25" width="148" x="63" y="140" as="geometry"/>
+        </mxCell>
+        <mxCell id="PRODUCTO_row_4_type" connectable="0" parent="PRODUCTO" style="text;html=1;align=right;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=12;fontColor=#50677D;fontStyle=0;" value="bit" vertex="1">
+          <mxGeometry height="25" width="96" x="206" y="140" as="geometry"/>
+        </mxCell>
+        <mxCell id="ESTADO_PEDIDO" parent="1" style="rounded=1;absoluteArcSize=1;arcSize=11;html=1;fillColor=#FFFFFF;strokeColor=#CCD8E5;strokeWidth=1.3;container=1;collapsible=0;recursiveResize=0;" value="" vertex="1">
+          <mxGeometry height="152" width="330" x="844" y="183" as="geometry"/>
+        </mxCell>
+        <mxCell id="ESTADO_PEDIDO_header" connectable="0" parent="ESTADO_PEDIDO" style="rounded=1;absoluteArcSize=1;arcSize=11;html=1;fillColor=#223D61;strokeColor=none;strokeWidth=1.3;" value="" vertex="1">
+          <mxGeometry height="35" width="324" x="3" y="3" as="geometry"/>
+        </mxCell>
+        <mxCell id="ESTADO_PEDIDO_title" connectable="0" parent="ESTADO_PEDIDO" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=17;fontColor=#FFFFFF;fontStyle=1;" value="ESTADO_PEDIDO" vertex="1">
+          <mxGeometry height="35" width="300" x="15" y="3" as="geometry"/>
+        </mxCell>
+        <mxCell id="ESTADO_PEDIDO_row_0_stripe" connectable="0" parent="ESTADO_PEDIDO" style="rounded=1;absoluteArcSize=1;arcSize=11;html=1;fillColor=#F4F7FB;strokeColor=none;strokeWidth=1.3;selectable=0;editable=0;movable=0;" value="" vertex="1">
+          <mxGeometry height="24" width="316" x="7" y="41" as="geometry"/>
+        </mxCell>
+        <mxCell id="ESTADO_PEDIDO_row_0_key" connectable="0" parent="ESTADO_PEDIDO" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=11;fontColor=#28559A;fontStyle=1;" value="PK" vertex="1">
+          <mxGeometry height="25" width="46" x="11" y="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="ESTADO_PEDIDO_row_0_field" connectable="0" parent="ESTADO_PEDIDO" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Consolas;fontSize=13;fontColor=#162C43;fontStyle=0;" value="estado_pedido_id" vertex="1">
+          <mxGeometry height="25" width="160" x="63" y="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="ESTADO_PEDIDO_row_0_type" connectable="0" parent="ESTADO_PEDIDO" style="text;html=1;align=right;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=12;fontColor=#50677D;fontStyle=0;" value="tinyint" vertex="1">
+          <mxGeometry height="25" width="96" x="218" y="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="ESTADO_PEDIDO_row_1_key" connectable="0" parent="ESTADO_PEDIDO" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=11;fontColor=#694A89;fontStyle=1;" value="UQ" vertex="1">
+          <mxGeometry height="25" width="46" x="11" y="65" as="geometry"/>
+        </mxCell>
+        <mxCell id="ESTADO_PEDIDO_row_1_field" connectable="0" parent="ESTADO_PEDIDO" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Consolas;fontSize=13;fontColor=#162C43;fontStyle=0;" value="codigo" vertex="1">
+          <mxGeometry height="25" width="160" x="63" y="65" as="geometry"/>
+        </mxCell>
+        <mxCell id="ESTADO_PEDIDO_row_1_type" connectable="0" parent="ESTADO_PEDIDO" style="text;html=1;align=right;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=12;fontColor=#50677D;fontStyle=0;" value="varchar(16)" vertex="1">
+          <mxGeometry height="25" width="96" x="218" y="65" as="geometry"/>
+        </mxCell>
+        <mxCell id="ESTADO_PEDIDO_row_2_stripe" connectable="0" parent="ESTADO_PEDIDO" style="rounded=1;absoluteArcSize=1;arcSize=11;html=1;fillColor=#F4F7FB;strokeColor=none;strokeWidth=1.3;selectable=0;editable=0;movable=0;" value="" vertex="1">
+          <mxGeometry height="24" width="316" x="7" y="91" as="geometry"/>
+        </mxCell>
+        <mxCell id="ESTADO_PEDIDO_row_2_field" connectable="0" parent="ESTADO_PEDIDO" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Consolas;fontSize=13;fontColor=#162C43;fontStyle=0;" value="nombre" vertex="1">
+          <mxGeometry height="25" width="160" x="63" y="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="ESTADO_PEDIDO_row_2_type" connectable="0" parent="ESTADO_PEDIDO" style="text;html=1;align=right;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=12;fontColor=#50677D;fontStyle=0;" value="nvarchar(60)" vertex="1">
+          <mxGeometry height="25" width="96" x="218" y="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="ESTADO_PEDIDO_rule_bg" connectable="0" parent="ESTADO_PEDIDO" style="rounded=1;absoluteArcSize=1;arcSize=11;html=1;fillColor=#EAF0F7;strokeColor=none;strokeWidth=1.3;" value="" vertex="1">
+          <mxGeometry height="23" width="316" x="7" y="119" as="geometry"/>
+        </mxCell>
+        <mxCell id="ESTADO_PEDIDO_rule" connectable="0" parent="ESTADO_PEDIDO" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=11;fontColor=#50677D;fontStyle=1;" value="Confirmado · Anulado" vertex="1">
+          <mxGeometry height="23" width="300" x="15" y="119" as="geometry"/>
+        </mxCell>
+        <mxCell id="PEDIDO" parent="1" style="rounded=1;absoluteArcSize=1;arcSize=11;html=1;fillColor=#FFFFFF;strokeColor=#CCD8E5;strokeWidth=1.3;container=1;collapsible=0;recursiveResize=0;" value="" vertex="1">
+          <mxGeometry height="250" width="330" x="844" y="392" as="geometry"/>
+        </mxCell>
+        <mxCell id="PEDIDO_header" connectable="0" parent="PEDIDO" style="rounded=1;absoluteArcSize=1;arcSize=11;html=1;fillColor=#223D61;strokeColor=none;strokeWidth=1.3;" value="" vertex="1">
+          <mxGeometry height="35" width="324" x="3" y="3" as="geometry"/>
+        </mxCell>
+        <mxCell id="PEDIDO_title" connectable="0" parent="PEDIDO" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=17;fontColor=#FFFFFF;fontStyle=1;" value="PEDIDO" vertex="1">
+          <mxGeometry height="35" width="300" x="15" y="3" as="geometry"/>
+        </mxCell>
+        <mxCell id="PEDIDO_row_0_stripe" connectable="0" parent="PEDIDO" style="rounded=1;absoluteArcSize=1;arcSize=11;html=1;fillColor=#F4F7FB;strokeColor=none;strokeWidth=1.3;selectable=0;editable=0;movable=0;" value="" vertex="1">
+          <mxGeometry height="24" width="316" x="7" y="41" as="geometry"/>
+        </mxCell>
+        <mxCell id="PEDIDO_row_0_key" connectable="0" parent="PEDIDO" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=11;fontColor=#28559A;fontStyle=1;" value="PK" vertex="1">
+          <mxGeometry height="25" width="46" x="11" y="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="PEDIDO_row_0_field" connectable="0" parent="PEDIDO" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Consolas;fontSize=13;fontColor=#162C43;fontStyle=0;" value="pedido_id" vertex="1">
+          <mxGeometry height="25" width="160" x="63" y="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="PEDIDO_row_0_type" connectable="0" parent="PEDIDO" style="text;html=1;align=right;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=12;fontColor=#50677D;fontStyle=0;" value="int" vertex="1">
+          <mxGeometry height="25" width="96" x="218" y="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="PEDIDO_row_1_key" connectable="0" parent="PEDIDO" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=11;fontColor=#246450;fontStyle=1;" value="FK" vertex="1">
+          <mxGeometry height="25" width="46" x="11" y="65" as="geometry"/>
+        </mxCell>
+        <mxCell id="PEDIDO_row_1_field" connectable="0" parent="PEDIDO" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Consolas;fontSize=13;fontColor=#162C43;fontStyle=0;" value="cliente_id" vertex="1">
+          <mxGeometry height="25" width="160" x="63" y="65" as="geometry"/>
+        </mxCell>
+        <mxCell id="PEDIDO_row_1_type" connectable="0" parent="PEDIDO" style="text;html=1;align=right;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=12;fontColor=#50677D;fontStyle=0;" value="int" vertex="1">
+          <mxGeometry height="25" width="96" x="218" y="65" as="geometry"/>
+        </mxCell>
+        <mxCell id="PEDIDO_row_2_stripe" connectable="0" parent="PEDIDO" style="rounded=1;absoluteArcSize=1;arcSize=11;html=1;fillColor=#F4F7FB;strokeColor=none;strokeWidth=1.3;selectable=0;editable=0;movable=0;" value="" vertex="1">
+          <mxGeometry height="24" width="316" x="7" y="91" as="geometry"/>
+        </mxCell>
+        <mxCell id="PEDIDO_row_2_key" connectable="0" parent="PEDIDO" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=11;fontColor=#246450;fontStyle=1;" value="FK" vertex="1">
+          <mxGeometry height="25" width="46" x="11" y="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="PEDIDO_row_2_field" connectable="0" parent="PEDIDO" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Consolas;fontSize=13;fontColor=#162C43;fontStyle=0;" value="vendedor_id" vertex="1">
+          <mxGeometry height="25" width="160" x="63" y="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="PEDIDO_row_2_type" connectable="0" parent="PEDIDO" style="text;html=1;align=right;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=12;fontColor=#50677D;fontStyle=0;" value="int" vertex="1">
+          <mxGeometry height="25" width="96" x="218" y="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="PEDIDO_row_3_field" connectable="0" parent="PEDIDO" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Consolas;fontSize=13;fontColor=#162C43;fontStyle=0;" value="registrado_en" vertex="1">
+          <mxGeometry height="25" width="160" x="63" y="115" as="geometry"/>
+        </mxCell>
+        <mxCell id="PEDIDO_row_3_type" connectable="0" parent="PEDIDO" style="text;html=1;align=right;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=12;fontColor=#50677D;fontStyle=0;" value="datetime2" vertex="1">
+          <mxGeometry height="25" width="96" x="218" y="115" as="geometry"/>
+        </mxCell>
+        <mxCell id="PEDIDO_row_4_stripe" connectable="0" parent="PEDIDO" style="rounded=1;absoluteArcSize=1;arcSize=11;html=1;fillColor=#F4F7FB;strokeColor=none;strokeWidth=1.3;selectable=0;editable=0;movable=0;" value="" vertex="1">
+          <mxGeometry height="24" width="316" x="7" y="141" as="geometry"/>
+        </mxCell>
+        <mxCell id="PEDIDO_row_4_field" connectable="0" parent="PEDIDO" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Consolas;fontSize=13;fontColor=#162C43;fontStyle=0;" value="moneda" vertex="1">
+          <mxGeometry height="25" width="160" x="63" y="140" as="geometry"/>
+        </mxCell>
+        <mxCell id="PEDIDO_row_4_type" connectable="0" parent="PEDIDO" style="text;html=1;align=right;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=12;fontColor=#50677D;fontStyle=0;" value="char(3)" vertex="1">
+          <mxGeometry height="25" width="96" x="218" y="140" as="geometry"/>
+        </mxCell>
+        <mxCell id="PEDIDO_row_5_field" connectable="0" parent="PEDIDO" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Consolas;fontSize=13;fontColor=#162C43;fontStyle=0;" value="total" vertex="1">
+          <mxGeometry height="25" width="160" x="63" y="165" as="geometry"/>
+        </mxCell>
+        <mxCell id="PEDIDO_row_5_type" connectable="0" parent="PEDIDO" style="text;html=1;align=right;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=12;fontColor=#50677D;fontStyle=0;" value="decimal(12,2)" vertex="1">
+          <mxGeometry height="25" width="96" x="218" y="165" as="geometry"/>
+        </mxCell>
+        <mxCell id="PEDIDO_row_6_stripe" connectable="0" parent="PEDIDO" style="rounded=1;absoluteArcSize=1;arcSize=11;html=1;fillColor=#F4F7FB;strokeColor=none;strokeWidth=1.3;selectable=0;editable=0;movable=0;" value="" vertex="1">
+          <mxGeometry height="24" width="316" x="7" y="191" as="geometry"/>
+        </mxCell>
+        <mxCell id="PEDIDO_row_6_key" connectable="0" parent="PEDIDO" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=11;fontColor=#246450;fontStyle=1;" value="FK" vertex="1">
+          <mxGeometry height="25" width="46" x="11" y="190" as="geometry"/>
+        </mxCell>
+        <mxCell id="PEDIDO_row_6_field" connectable="0" parent="PEDIDO" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Consolas;fontSize=13;fontColor=#162C43;fontStyle=0;" value="estado_pedido_id" vertex="1">
+          <mxGeometry height="25" width="160" x="63" y="190" as="geometry"/>
+        </mxCell>
+        <mxCell id="PEDIDO_row_6_type" connectable="0" parent="PEDIDO" style="text;html=1;align=right;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=12;fontColor=#50677D;fontStyle=0;" value="tinyint" vertex="1">
+          <mxGeometry height="25" width="96" x="218" y="190" as="geometry"/>
+        </mxCell>
+        <mxCell id="PEDIDO_row_7_key" connectable="0" parent="PEDIDO" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=11;fontColor=#694A89;fontStyle=1;" value="UQ" vertex="1">
+          <mxGeometry height="25" width="46" x="11" y="215" as="geometry"/>
+        </mxCell>
+        <mxCell id="PEDIDO_row_7_field" connectable="0" parent="PEDIDO" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Consolas;fontSize=13;fontColor=#162C43;fontStyle=0;" value="operacion_id" vertex="1">
+          <mxGeometry height="25" width="160" x="63" y="215" as="geometry"/>
+        </mxCell>
+        <mxCell id="PEDIDO_row_7_type" connectable="0" parent="PEDIDO" style="text;html=1;align=right;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=12;fontColor=#50677D;fontStyle=0;" value="uniqueidentifier" vertex="1">
+          <mxGeometry height="25" width="96" x="218" y="215" as="geometry"/>
+        </mxCell>
+        <mxCell id="PEDIDO_DETALLE" parent="1" style="rounded=1;absoluteArcSize=1;arcSize=11;html=1;fillColor=#FFFFFF;strokeColor=#CCD8E5;strokeWidth=1.3;container=1;collapsible=0;recursiveResize=0;" value="" vertex="1">
+          <mxGeometry height="200" width="330" x="844" y="758" as="geometry"/>
+        </mxCell>
+        <mxCell id="PEDIDO_DETALLE_header" connectable="0" parent="PEDIDO_DETALLE" style="rounded=1;absoluteArcSize=1;arcSize=11;html=1;fillColor=#223D61;strokeColor=none;strokeWidth=1.3;" value="" vertex="1">
+          <mxGeometry height="35" width="324" x="3" y="3" as="geometry"/>
+        </mxCell>
+        <mxCell id="PEDIDO_DETALLE_title" connectable="0" parent="PEDIDO_DETALLE" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=17;fontColor=#FFFFFF;fontStyle=1;" value="PEDIDO_DETALLE" vertex="1">
+          <mxGeometry height="35" width="300" x="15" y="3" as="geometry"/>
+        </mxCell>
+        <mxCell id="PEDIDO_DETALLE_row_0_stripe" connectable="0" parent="PEDIDO_DETALLE" style="rounded=1;absoluteArcSize=1;arcSize=11;html=1;fillColor=#F4F7FB;strokeColor=none;strokeWidth=1.3;selectable=0;editable=0;movable=0;" value="" vertex="1">
+          <mxGeometry height="24" width="316" x="7" y="41" as="geometry"/>
+        </mxCell>
+        <mxCell id="PEDIDO_DETALLE_row_0_key" connectable="0" parent="PEDIDO_DETALLE" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=11;fontColor=#28559A;fontStyle=1;" value="PK" vertex="1">
+          <mxGeometry height="25" width="46" x="11" y="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="PEDIDO_DETALLE_row_0_field" connectable="0" parent="PEDIDO_DETALLE" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Consolas;fontSize=13;fontColor=#162C43;fontStyle=0;" value="pedido_detalle_id" vertex="1">
+          <mxGeometry height="25" width="160" x="63" y="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="PEDIDO_DETALLE_row_0_type" connectable="0" parent="PEDIDO_DETALLE" style="text;html=1;align=right;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=12;fontColor=#50677D;fontStyle=0;" value="int" vertex="1">
+          <mxGeometry height="25" width="96" x="218" y="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="PEDIDO_DETALLE_row_1_key" connectable="0" parent="PEDIDO_DETALLE" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=11;fontColor=#246450;fontStyle=1;" value="FK" vertex="1">
+          <mxGeometry height="25" width="46" x="11" y="65" as="geometry"/>
+        </mxCell>
+        <mxCell id="PEDIDO_DETALLE_row_1_field" connectable="0" parent="PEDIDO_DETALLE" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Consolas;fontSize=13;fontColor=#162C43;fontStyle=0;" value="pedido_id" vertex="1">
+          <mxGeometry height="25" width="160" x="63" y="65" as="geometry"/>
+        </mxCell>
+        <mxCell id="PEDIDO_DETALLE_row_1_type" connectable="0" parent="PEDIDO_DETALLE" style="text;html=1;align=right;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=12;fontColor=#50677D;fontStyle=0;" value="int" vertex="1">
+          <mxGeometry height="25" width="96" x="218" y="65" as="geometry"/>
+        </mxCell>
+        <mxCell id="PEDIDO_DETALLE_row_2_stripe" connectable="0" parent="PEDIDO_DETALLE" style="rounded=1;absoluteArcSize=1;arcSize=11;html=1;fillColor=#F4F7FB;strokeColor=none;strokeWidth=1.3;selectable=0;editable=0;movable=0;" value="" vertex="1">
+          <mxGeometry height="24" width="316" x="7" y="91" as="geometry"/>
+        </mxCell>
+        <mxCell id="PEDIDO_DETALLE_row_2_key" connectable="0" parent="PEDIDO_DETALLE" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=11;fontColor=#246450;fontStyle=1;" value="FK" vertex="1">
+          <mxGeometry height="25" width="46" x="11" y="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="PEDIDO_DETALLE_row_2_field" connectable="0" parent="PEDIDO_DETALLE" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Consolas;fontSize=13;fontColor=#162C43;fontStyle=0;" value="producto_id" vertex="1">
+          <mxGeometry height="25" width="160" x="63" y="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="PEDIDO_DETALLE_row_2_type" connectable="0" parent="PEDIDO_DETALLE" style="text;html=1;align=right;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=12;fontColor=#50677D;fontStyle=0;" value="int" vertex="1">
+          <mxGeometry height="25" width="96" x="218" y="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="PEDIDO_DETALLE_row_3_field" connectable="0" parent="PEDIDO_DETALLE" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Consolas;fontSize=13;fontColor=#162C43;fontStyle=0;" value="descripcion" vertex="1">
+          <mxGeometry height="25" width="160" x="63" y="115" as="geometry"/>
+        </mxCell>
+        <mxCell id="PEDIDO_DETALLE_row_3_type" connectable="0" parent="PEDIDO_DETALLE" style="text;html=1;align=right;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=12;fontColor=#50677D;fontStyle=0;" value="nvarchar(160)" vertex="1">
+          <mxGeometry height="25" width="96" x="218" y="115" as="geometry"/>
+        </mxCell>
+        <mxCell id="PEDIDO_DETALLE_row_4_stripe" connectable="0" parent="PEDIDO_DETALLE" style="rounded=1;absoluteArcSize=1;arcSize=11;html=1;fillColor=#F4F7FB;strokeColor=none;strokeWidth=1.3;selectable=0;editable=0;movable=0;" value="" vertex="1">
+          <mxGeometry height="24" width="316" x="7" y="141" as="geometry"/>
+        </mxCell>
+        <mxCell id="PEDIDO_DETALLE_row_4_field" connectable="0" parent="PEDIDO_DETALLE" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Consolas;fontSize=13;fontColor=#162C43;fontStyle=0;" value="cantidad" vertex="1">
+          <mxGeometry height="25" width="160" x="63" y="140" as="geometry"/>
+        </mxCell>
+        <mxCell id="PEDIDO_DETALLE_row_4_type" connectable="0" parent="PEDIDO_DETALLE" style="text;html=1;align=right;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=12;fontColor=#50677D;fontStyle=0;" value="decimal(12,3)" vertex="1">
+          <mxGeometry height="25" width="96" x="218" y="140" as="geometry"/>
+        </mxCell>
+        <mxCell id="PEDIDO_DETALLE_row_5_field" connectable="0" parent="PEDIDO_DETALLE" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Consolas;fontSize=13;fontColor=#162C43;fontStyle=0;" value="precio_unitario" vertex="1">
+          <mxGeometry height="25" width="160" x="63" y="165" as="geometry"/>
+        </mxCell>
+        <mxCell id="PEDIDO_DETALLE_row_5_type" connectable="0" parent="PEDIDO_DETALLE" style="text;html=1;align=right;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=12;fontColor=#50677D;fontStyle=0;" value="decimal(12,2)" vertex="1">
+          <mxGeometry height="25" width="96" x="218" y="165" as="geometry"/>
+        </mxCell>
+        <mxCell id="ESTADO_COMPROBANTE" parent="1" style="rounded=1;absoluteArcSize=1;arcSize=11;html=1;fillColor=#FFFFFF;strokeColor=#CCD8E5;strokeWidth=1.3;container=1;collapsible=0;recursiveResize=0;" value="" vertex="1">
+          <mxGeometry height="152" width="356" x="1270" y="183" as="geometry"/>
+        </mxCell>
+        <mxCell id="ESTADO_COMPROBANTE_header" connectable="0" parent="ESTADO_COMPROBANTE" style="rounded=1;absoluteArcSize=1;arcSize=11;html=1;fillColor=#594678;strokeColor=none;strokeWidth=1.3;" value="" vertex="1">
+          <mxGeometry height="35" width="350" x="3" y="3" as="geometry"/>
+        </mxCell>
+        <mxCell id="ESTADO_COMPROBANTE_title" connectable="0" parent="ESTADO_COMPROBANTE" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=17;fontColor=#FFFFFF;fontStyle=1;" value="ESTADO_COMPROBANTE" vertex="1">
+          <mxGeometry height="35" width="326" x="15" y="3" as="geometry"/>
+        </mxCell>
+        <mxCell id="ESTADO_COMPROBANTE_row_0_stripe" connectable="0" parent="ESTADO_COMPROBANTE" style="rounded=1;absoluteArcSize=1;arcSize=11;html=1;fillColor=#F4F7FB;strokeColor=none;strokeWidth=1.3;selectable=0;editable=0;movable=0;" value="" vertex="1">
+          <mxGeometry height="24" width="342" x="7" y="41" as="geometry"/>
+        </mxCell>
+        <mxCell id="ESTADO_COMPROBANTE_row_0_key" connectable="0" parent="ESTADO_COMPROBANTE" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=11;fontColor=#28559A;fontStyle=1;" value="PK" vertex="1">
+          <mxGeometry height="25" width="46" x="11" y="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="ESTADO_COMPROBANTE_row_0_field" connectable="0" parent="ESTADO_COMPROBANTE" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Consolas;fontSize=13;fontColor=#162C43;fontStyle=0;" value="estado_comprobante_id" vertex="1">
+          <mxGeometry height="25" width="186" x="63" y="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="ESTADO_COMPROBANTE_row_0_type" connectable="0" parent="ESTADO_COMPROBANTE" style="text;html=1;align=right;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=12;fontColor=#50677D;fontStyle=0;" value="tinyint" vertex="1">
+          <mxGeometry height="25" width="96" x="244" y="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="ESTADO_COMPROBANTE_row_1_key" connectable="0" parent="ESTADO_COMPROBANTE" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=11;fontColor=#694A89;fontStyle=1;" value="UQ" vertex="1">
+          <mxGeometry height="25" width="46" x="11" y="65" as="geometry"/>
+        </mxCell>
+        <mxCell id="ESTADO_COMPROBANTE_row_1_field" connectable="0" parent="ESTADO_COMPROBANTE" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Consolas;fontSize=13;fontColor=#162C43;fontStyle=0;" value="codigo" vertex="1">
+          <mxGeometry height="25" width="186" x="63" y="65" as="geometry"/>
+        </mxCell>
+        <mxCell id="ESTADO_COMPROBANTE_row_1_type" connectable="0" parent="ESTADO_COMPROBANTE" style="text;html=1;align=right;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=12;fontColor=#50677D;fontStyle=0;" value="varchar(16)" vertex="1">
+          <mxGeometry height="25" width="96" x="244" y="65" as="geometry"/>
+        </mxCell>
+        <mxCell id="ESTADO_COMPROBANTE_row_2_stripe" connectable="0" parent="ESTADO_COMPROBANTE" style="rounded=1;absoluteArcSize=1;arcSize=11;html=1;fillColor=#F4F7FB;strokeColor=none;strokeWidth=1.3;selectable=0;editable=0;movable=0;" value="" vertex="1">
+          <mxGeometry height="24" width="342" x="7" y="91" as="geometry"/>
+        </mxCell>
+        <mxCell id="ESTADO_COMPROBANTE_row_2_field" connectable="0" parent="ESTADO_COMPROBANTE" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Consolas;fontSize=13;fontColor=#162C43;fontStyle=0;" value="nombre" vertex="1">
+          <mxGeometry height="25" width="186" x="63" y="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="ESTADO_COMPROBANTE_row_2_type" connectable="0" parent="ESTADO_COMPROBANTE" style="text;html=1;align=right;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=12;fontColor=#50677D;fontStyle=0;" value="nvarchar(60)" vertex="1">
+          <mxGeometry height="25" width="96" x="244" y="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="ESTADO_COMPROBANTE_rule_bg" connectable="0" parent="ESTADO_COMPROBANTE" style="rounded=1;absoluteArcSize=1;arcSize=11;html=1;fillColor=#EAF0F7;strokeColor=none;strokeWidth=1.3;" value="" vertex="1">
+          <mxGeometry height="23" width="342" x="7" y="119" as="geometry"/>
+        </mxCell>
+        <mxCell id="ESTADO_COMPROBANTE_rule" connectable="0" parent="ESTADO_COMPROBANTE" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=11;fontColor=#50677D;fontStyle=1;" value="Pendiente · Emitido · Rechazado" vertex="1">
+          <mxGeometry height="23" width="326" x="15" y="119" as="geometry"/>
+        </mxCell>
+        <mxCell id="COMPROBANTE" parent="1" style="rounded=1;absoluteArcSize=1;arcSize=11;html=1;fillColor=#FFFFFF;strokeColor=#CCD8E5;strokeWidth=1.3;container=1;collapsible=0;recursiveResize=0;" value="" vertex="1">
+          <mxGeometry height="302" width="356" x="1270" y="392" as="geometry"/>
+        </mxCell>
+        <mxCell id="COMPROBANTE_header" connectable="0" parent="COMPROBANTE" style="rounded=1;absoluteArcSize=1;arcSize=11;html=1;fillColor=#594678;strokeColor=none;strokeWidth=1.3;" value="" vertex="1">
+          <mxGeometry height="35" width="350" x="3" y="3" as="geometry"/>
+        </mxCell>
+        <mxCell id="COMPROBANTE_title" connectable="0" parent="COMPROBANTE" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=17;fontColor=#FFFFFF;fontStyle=1;" value="COMPROBANTE" vertex="1">
+          <mxGeometry height="35" width="326" x="15" y="3" as="geometry"/>
+        </mxCell>
+        <mxCell id="COMPROBANTE_row_0_stripe" connectable="0" parent="COMPROBANTE" style="rounded=1;absoluteArcSize=1;arcSize=11;html=1;fillColor=#F4F7FB;strokeColor=none;strokeWidth=1.3;selectable=0;editable=0;movable=0;" value="" vertex="1">
+          <mxGeometry height="24" width="342" x="7" y="41" as="geometry"/>
+        </mxCell>
+        <mxCell id="COMPROBANTE_row_0_key" connectable="0" parent="COMPROBANTE" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=11;fontColor=#28559A;fontStyle=1;" value="PK" vertex="1">
+          <mxGeometry height="25" width="46" x="11" y="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="COMPROBANTE_row_0_field" connectable="0" parent="COMPROBANTE" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Consolas;fontSize=13;fontColor=#162C43;fontStyle=0;" value="comprobante_id" vertex="1">
+          <mxGeometry height="25" width="186" x="63" y="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="COMPROBANTE_row_0_type" connectable="0" parent="COMPROBANTE" style="text;html=1;align=right;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=12;fontColor=#50677D;fontStyle=0;" value="int" vertex="1">
+          <mxGeometry height="25" width="96" x="244" y="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="COMPROBANTE_row_1_key" connectable="0" parent="COMPROBANTE" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=11;fontColor=#246450;fontStyle=1;" value="FK UQ" vertex="1">
+          <mxGeometry height="25" width="46" x="11" y="65" as="geometry"/>
+        </mxCell>
+        <mxCell id="COMPROBANTE_row_1_field" connectable="0" parent="COMPROBANTE" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Consolas;fontSize=13;fontColor=#162C43;fontStyle=0;" value="pedido_id" vertex="1">
+          <mxGeometry height="25" width="186" x="63" y="65" as="geometry"/>
+        </mxCell>
+        <mxCell id="COMPROBANTE_row_1_type" connectable="0" parent="COMPROBANTE" style="text;html=1;align=right;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=12;fontColor=#50677D;fontStyle=0;" value="int" vertex="1">
+          <mxGeometry height="25" width="96" x="244" y="65" as="geometry"/>
+        </mxCell>
+        <mxCell id="COMPROBANTE_row_2_stripe" value="" style="rounded=1;absoluteArcSize=1;arcSize=11;html=1;fillColor=#F4F7FB;strokeColor=none;strokeWidth=1.3;selectable=0;editable=0;movable=0;" vertex="1" parent="COMPROBANTE" connectable="0">
+          <mxGeometry x="7" y="91" width="342" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="COMPROBANTE_row_2_key" value="FK" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=11;fontColor=#246450;fontStyle=1;" vertex="1" parent="COMPROBANTE" connectable="0">
+          <mxGeometry x="11" y="90" width="46" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="COMPROBANTE_row_2_field" value="serie_comprobante_id" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Consolas;fontSize=13;fontColor=#162C43;fontStyle=0;" vertex="1" parent="COMPROBANTE" connectable="0">
+          <mxGeometry x="63" y="90" width="186" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="COMPROBANTE_row_2_type" value="int" style="text;html=1;align=right;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=12;fontColor=#50677D;fontStyle=0;" vertex="1" parent="COMPROBANTE" connectable="0">
+          <mxGeometry x="244" y="90" width="96" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="COMPROBANTE_row_3_field" value="correlativo" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Consolas;fontSize=13;fontColor=#162C43;fontStyle=0;" vertex="1" parent="COMPROBANTE" connectable="0">
+          <mxGeometry x="63" y="115" width="186" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="COMPROBANTE_row_3_type" value="int" style="text;html=1;align=right;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=12;fontColor=#50677D;fontStyle=0;" vertex="1" parent="COMPROBANTE" connectable="0">
+          <mxGeometry x="244" y="115" width="96" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="COMPROBANTE_row_4_stripe" value="" style="rounded=1;absoluteArcSize=1;arcSize=11;html=1;fillColor=#F4F7FB;strokeColor=none;strokeWidth=1.3;selectable=0;editable=0;movable=0;" vertex="1" parent="COMPROBANTE" connectable="0">
+          <mxGeometry x="7" y="141" width="342" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="COMPROBANTE_row_4_field" value="receptor_tipo_doc" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Consolas;fontSize=13;fontColor=#162C43;fontStyle=0;" vertex="1" parent="COMPROBANTE" connectable="0">
+          <mxGeometry x="63" y="140" width="186" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="COMPROBANTE_row_4_type" value="char(1)" style="text;html=1;align=right;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=12;fontColor=#50677D;fontStyle=0;" vertex="1" parent="COMPROBANTE" connectable="0">
+          <mxGeometry x="244" y="140" width="96" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="COMPROBANTE_row_5_field" value="receptor_numero_doc" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Consolas;fontSize=13;fontColor=#162C43;fontStyle=0;" vertex="1" parent="COMPROBANTE" connectable="0">
+          <mxGeometry x="63" y="165" width="186" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="COMPROBANTE_row_5_type" value="varchar(12)" style="text;html=1;align=right;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=12;fontColor=#50677D;fontStyle=0;" vertex="1" parent="COMPROBANTE" connectable="0">
+          <mxGeometry x="244" y="165" width="96" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="COMPROBANTE_row_6_stripe" value="" style="rounded=1;absoluteArcSize=1;arcSize=11;html=1;fillColor=#F4F7FB;strokeColor=none;strokeWidth=1.3;selectable=0;editable=0;movable=0;" vertex="1" parent="COMPROBANTE" connectable="0">
+          <mxGeometry x="7" y="191" width="342" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="COMPROBANTE_row_6_field" value="receptor_nombre" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Consolas;fontSize=13;fontColor=#162C43;fontStyle=0;" vertex="1" parent="COMPROBANTE" connectable="0">
+          <mxGeometry x="63" y="190" width="186" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="COMPROBANTE_row_6_type" value="nvarchar(160)" style="text;html=1;align=right;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=12;fontColor=#50677D;fontStyle=0;" vertex="1" parent="COMPROBANTE" connectable="0">
+          <mxGeometry x="244" y="190" width="96" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="COMPROBANTE_row_7_field" value="emitido_en" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Consolas;fontSize=13;fontColor=#162C43;fontStyle=0;" vertex="1" parent="COMPROBANTE" connectable="0">
+          <mxGeometry x="63" y="215" width="186" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="COMPROBANTE_row_7_type" value="datetime2?" style="text;html=1;align=right;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=12;fontColor=#50677D;fontStyle=0;" vertex="1" parent="COMPROBANTE" connectable="0">
+          <mxGeometry x="244" y="215" width="96" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="COMPROBANTE_row_8_stripe" value="" style="rounded=1;absoluteArcSize=1;arcSize=11;html=1;fillColor=#F4F7FB;strokeColor=none;strokeWidth=1.3;selectable=0;editable=0;movable=0;" vertex="1" parent="COMPROBANTE" connectable="0">
+          <mxGeometry x="7" y="241" width="342" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="COMPROBANTE_row_8_key" value="FK" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=11;fontColor=#246450;fontStyle=1;" vertex="1" parent="COMPROBANTE" connectable="0">
+          <mxGeometry x="11" y="240" width="46" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="COMPROBANTE_row_8_field" value="estado_comprobante_id" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Consolas;fontSize=13;fontColor=#162C43;fontStyle=0;" vertex="1" parent="COMPROBANTE" connectable="0">
+          <mxGeometry x="63" y="240" width="186" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="COMPROBANTE_row_8_type" value="tinyint" style="text;html=1;align=right;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=12;fontColor=#50677D;fontStyle=0;" vertex="1" parent="COMPROBANTE" connectable="0">
+          <mxGeometry x="244" y="240" width="96" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="COMPROBANTE_rule_bg" connectable="0" parent="COMPROBANTE" style="rounded=1;absoluteArcSize=1;arcSize=11;html=1;fillColor=#EAF0F7;strokeColor=none;strokeWidth=1.3;" value="" vertex="1">
+          <mxGeometry height="23" width="342" x="7" y="269" as="geometry"/>
+        </mxCell>
+        <mxCell id="COMPROBANTE_rule" connectable="0" parent="COMPROBANTE" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=11;fontColor=#50677D;fontStyle=1;" value="UQ · serie_comprobante_id + correlativo" vertex="1">
+          <mxGeometry height="23" width="326" x="15" y="269" as="geometry"/>
+        </mxCell>
+        <mxCell id="SERIE_COMPROBANTE" value="" style="rounded=1;absoluteArcSize=1;arcSize=11;html=1;fillColor=#FFFFFF;strokeColor=#CCD8E5;strokeWidth=1.3;container=1;collapsible=0;recursiveResize=0;" vertex="1" parent="1" connectable="1">
+          <mxGeometry x="1270" y="749" width="356" height="202" as="geometry"/>
+        </mxCell>
+        <mxCell id="SERIE_COMPROBANTE_header" value="" style="rounded=1;absoluteArcSize=1;arcSize=11;html=1;fillColor=#594678;strokeColor=none;strokeWidth=1.3;" vertex="1" parent="SERIE_COMPROBANTE" connectable="0">
+          <mxGeometry x="3" y="3" width="350" height="35" as="geometry"/>
+        </mxCell>
+        <mxCell id="SERIE_COMPROBANTE_title" value="SERIE_COMPROBANTE" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=17;fontColor=#FFFFFF;fontStyle=1;" vertex="1" parent="SERIE_COMPROBANTE" connectable="0">
+          <mxGeometry x="15" y="3" width="326" height="35" as="geometry"/>
+        </mxCell>
+        <mxCell id="SERIE_COMPROBANTE_row_0_stripe" value="" style="rounded=1;absoluteArcSize=1;arcSize=11;html=1;fillColor=#F4F7FB;strokeColor=none;strokeWidth=1.3;selectable=0;editable=0;movable=0;" vertex="1" parent="SERIE_COMPROBANTE" connectable="0">
+          <mxGeometry x="7" y="41" width="342" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="SERIE_COMPROBANTE_row_0_key" value="PK" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=11;fontColor=#28559A;fontStyle=1;" vertex="1" parent="SERIE_COMPROBANTE" connectable="0">
+          <mxGeometry x="11" y="40" width="46" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="SERIE_COMPROBANTE_row_0_field" value="serie_comprobante_id" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Consolas;fontSize=13;fontColor=#162C43;fontStyle=0;" vertex="1" parent="SERIE_COMPROBANTE" connectable="0">
+          <mxGeometry x="63" y="40" width="186" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="SERIE_COMPROBANTE_row_0_type" value="int" style="text;html=1;align=right;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=12;fontColor=#50677D;fontStyle=0;" vertex="1" parent="SERIE_COMPROBANTE" connectable="0">
+          <mxGeometry x="244" y="40" width="96" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="SERIE_COMPROBANTE_row_1_field" value="tipo" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Consolas;fontSize=13;fontColor=#162C43;fontStyle=0;" vertex="1" parent="SERIE_COMPROBANTE" connectable="0">
+          <mxGeometry x="63" y="65" width="186" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="SERIE_COMPROBANTE_row_1_type" value="varchar(8)" style="text;html=1;align=right;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=12;fontColor=#50677D;fontStyle=0;" vertex="1" parent="SERIE_COMPROBANTE" connectable="0">
+          <mxGeometry x="244" y="65" width="96" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="SERIE_COMPROBANTE_row_2_stripe" value="" style="rounded=1;absoluteArcSize=1;arcSize=11;html=1;fillColor=#F4F7FB;strokeColor=none;strokeWidth=1.3;selectable=0;editable=0;movable=0;" vertex="1" parent="SERIE_COMPROBANTE" connectable="0">
+          <mxGeometry x="7" y="91" width="342" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="SERIE_COMPROBANTE_row_2_field" value="serie" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Consolas;fontSize=13;fontColor=#162C43;fontStyle=0;" vertex="1" parent="SERIE_COMPROBANTE" connectable="0">
+          <mxGeometry x="63" y="90" width="186" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="SERIE_COMPROBANTE_row_2_type" value="char(4)" style="text;html=1;align=right;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=12;fontColor=#50677D;fontStyle=0;" vertex="1" parent="SERIE_COMPROBANTE" connectable="0">
+          <mxGeometry x="244" y="90" width="96" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="SERIE_COMPROBANTE_row_3_field" value="ultimo_correlativo" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Consolas;fontSize=13;fontColor=#162C43;fontStyle=0;" vertex="1" parent="SERIE_COMPROBANTE" connectable="0">
+          <mxGeometry x="63" y="115" width="186" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="SERIE_COMPROBANTE_row_3_type" value="int" style="text;html=1;align=right;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=12;fontColor=#50677D;fontStyle=0;" vertex="1" parent="SERIE_COMPROBANTE" connectable="0">
+          <mxGeometry x="244" y="115" width="96" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="SERIE_COMPROBANTE_row_4_stripe" value="" style="rounded=1;absoluteArcSize=1;arcSize=11;html=1;fillColor=#F4F7FB;strokeColor=none;strokeWidth=1.3;selectable=0;editable=0;movable=0;" vertex="1" parent="SERIE_COMPROBANTE" connectable="0">
+          <mxGeometry x="7" y="141" width="342" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="SERIE_COMPROBANTE_row_4_field" value="activo" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Consolas;fontSize=13;fontColor=#162C43;fontStyle=0;" vertex="1" parent="SERIE_COMPROBANTE" connectable="0">
+          <mxGeometry x="63" y="140" width="186" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="SERIE_COMPROBANTE_row_4_type" value="bit" style="text;html=1;align=right;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=12;fontColor=#50677D;fontStyle=0;" vertex="1" parent="SERIE_COMPROBANTE" connectable="0">
+          <mxGeometry x="244" y="140" width="96" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="SERIE_COMPROBANTE_rule_bg" value="" style="rounded=1;absoluteArcSize=1;arcSize=11;html=1;fillColor=#EAF0F7;strokeColor=none;strokeWidth=1.3;" vertex="1" parent="SERIE_COMPROBANTE" connectable="0">
+          <mxGeometry x="7" y="169" width="342" height="23" as="geometry"/>
+        </mxCell>
+        <mxCell id="SERIE_COMPROBANTE_rule" value="UQ · tipo + serie" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=11;fontColor=#50677D;fontStyle=1;" vertex="1" parent="SERIE_COMPROBANTE" connectable="0">
+          <mxGeometry x="15" y="169" width="326" height="23" as="geometry"/>
+        </mxCell>
+        <mxCell id="ESTADO_PAGO" parent="1" style="rounded=1;absoluteArcSize=1;arcSize=11;html=1;fillColor=#FFFFFF;strokeColor=#CCD8E5;strokeWidth=1.3;container=1;collapsible=0;recursiveResize=0;" value="" vertex="1">
+          <mxGeometry height="152" width="356" x="1270" y="1286" as="geometry"/>
+        </mxCell>
+        <mxCell id="ESTADO_PAGO_header" connectable="0" parent="ESTADO_PAGO" style="rounded=1;absoluteArcSize=1;arcSize=11;html=1;fillColor=#594678;strokeColor=none;strokeWidth=1.3;" value="" vertex="1">
+          <mxGeometry height="35" width="350" x="3" y="3" as="geometry"/>
+        </mxCell>
+        <mxCell id="ESTADO_PAGO_title" connectable="0" parent="ESTADO_PAGO" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=17;fontColor=#FFFFFF;fontStyle=1;" value="ESTADO_PAGO" vertex="1">
+          <mxGeometry height="35" width="326" x="15" y="3" as="geometry"/>
+        </mxCell>
+        <mxCell id="ESTADO_PAGO_row_0_stripe" connectable="0" parent="ESTADO_PAGO" style="rounded=1;absoluteArcSize=1;arcSize=11;html=1;fillColor=#F4F7FB;strokeColor=none;strokeWidth=1.3;selectable=0;editable=0;movable=0;" value="" vertex="1">
+          <mxGeometry height="24" width="342" x="7" y="41" as="geometry"/>
+        </mxCell>
+        <mxCell id="ESTADO_PAGO_row_0_key" connectable="0" parent="ESTADO_PAGO" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=11;fontColor=#28559A;fontStyle=1;" value="PK" vertex="1">
+          <mxGeometry height="25" width="46" x="11" y="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="ESTADO_PAGO_row_0_field" connectable="0" parent="ESTADO_PAGO" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Consolas;fontSize=13;fontColor=#162C43;fontStyle=0;" value="estado_pago_id" vertex="1">
+          <mxGeometry height="25" width="186" x="63" y="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="ESTADO_PAGO_row_0_type" connectable="0" parent="ESTADO_PAGO" style="text;html=1;align=right;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=12;fontColor=#50677D;fontStyle=0;" value="tinyint" vertex="1">
+          <mxGeometry height="25" width="96" x="244" y="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="ESTADO_PAGO_row_1_key" connectable="0" parent="ESTADO_PAGO" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=11;fontColor=#694A89;fontStyle=1;" value="UQ" vertex="1">
+          <mxGeometry height="25" width="46" x="11" y="65" as="geometry"/>
+        </mxCell>
+        <mxCell id="ESTADO_PAGO_row_1_field" connectable="0" parent="ESTADO_PAGO" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Consolas;fontSize=13;fontColor=#162C43;fontStyle=0;" value="codigo" vertex="1">
+          <mxGeometry height="25" width="186" x="63" y="65" as="geometry"/>
+        </mxCell>
+        <mxCell id="ESTADO_PAGO_row_1_type" connectable="0" parent="ESTADO_PAGO" style="text;html=1;align=right;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=12;fontColor=#50677D;fontStyle=0;" value="varchar(16)" vertex="1">
+          <mxGeometry height="25" width="96" x="244" y="65" as="geometry"/>
+        </mxCell>
+        <mxCell id="ESTADO_PAGO_row_2_stripe" connectable="0" parent="ESTADO_PAGO" style="rounded=1;absoluteArcSize=1;arcSize=11;html=1;fillColor=#F4F7FB;strokeColor=none;strokeWidth=1.3;selectable=0;editable=0;movable=0;" value="" vertex="1">
+          <mxGeometry height="24" width="342" x="7" y="91" as="geometry"/>
+        </mxCell>
+        <mxCell id="ESTADO_PAGO_row_2_field" connectable="0" parent="ESTADO_PAGO" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Consolas;fontSize=13;fontColor=#162C43;fontStyle=0;" value="nombre" vertex="1">
+          <mxGeometry height="25" width="186" x="63" y="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="ESTADO_PAGO_row_2_type" connectable="0" parent="ESTADO_PAGO" style="text;html=1;align=right;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=12;fontColor=#50677D;fontStyle=0;" value="nvarchar(60)" vertex="1">
+          <mxGeometry height="25" width="96" x="244" y="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="ESTADO_PAGO_rule_bg" connectable="0" parent="ESTADO_PAGO" style="rounded=1;absoluteArcSize=1;arcSize=11;html=1;fillColor=#EAF0F7;strokeColor=none;strokeWidth=1.3;" value="" vertex="1">
+          <mxGeometry height="23" width="342" x="7" y="119" as="geometry"/>
+        </mxCell>
+        <mxCell id="ESTADO_PAGO_rule" connectable="0" parent="ESTADO_PAGO" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=11;fontColor=#50677D;fontStyle=1;" value="Pendiente · Confirmado · Anulado" vertex="1">
+          <mxGeometry height="23" width="326" x="15" y="119" as="geometry"/>
+        </mxCell>
+        <mxCell id="MEDIO_PAGO" value="" style="rounded=1;absoluteArcSize=1;arcSize=11;html=1;fillColor=#FFFFFF;strokeColor=#CCD8E5;strokeWidth=1.3;container=1;collapsible=0;recursiveResize=0;" vertex="1" parent="1" connectable="1">
+          <mxGeometry x="844" y="1048" width="330" height="177" as="geometry"/>
+        </mxCell>
+        <mxCell id="MEDIO_PAGO_header" value="" style="rounded=1;absoluteArcSize=1;arcSize=11;html=1;fillColor=#594678;strokeColor=none;strokeWidth=1.3;" vertex="1" parent="MEDIO_PAGO" connectable="0">
+          <mxGeometry x="3" y="3" width="324" height="35" as="geometry"/>
+        </mxCell>
+        <mxCell id="MEDIO_PAGO_title" value="MEDIO_PAGO" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=17;fontColor=#FFFFFF;fontStyle=1;" vertex="1" parent="MEDIO_PAGO" connectable="0">
+          <mxGeometry x="15" y="3" width="300" height="35" as="geometry"/>
+        </mxCell>
+        <mxCell id="MEDIO_PAGO_row_0_stripe" value="" style="rounded=1;absoluteArcSize=1;arcSize=11;html=1;fillColor=#F4F7FB;strokeColor=none;strokeWidth=1.3;selectable=0;editable=0;movable=0;" vertex="1" parent="MEDIO_PAGO" connectable="0">
+          <mxGeometry x="7" y="41" width="316" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="MEDIO_PAGO_row_0_key" value="PK" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=11;fontColor=#28559A;fontStyle=1;" vertex="1" parent="MEDIO_PAGO" connectable="0">
+          <mxGeometry x="11" y="40" width="46" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="MEDIO_PAGO_row_0_field" value="medio_pago_id" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Consolas;fontSize=13;fontColor=#162C43;fontStyle=0;" vertex="1" parent="MEDIO_PAGO" connectable="0">
+          <mxGeometry x="63" y="40" width="160" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="MEDIO_PAGO_row_0_type" value="tinyint" style="text;html=1;align=right;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=12;fontColor=#50677D;fontStyle=0;" vertex="1" parent="MEDIO_PAGO" connectable="0">
+          <mxGeometry x="218" y="40" width="96" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="MEDIO_PAGO_row_1_key" value="UQ" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=11;fontColor=#694A89;fontStyle=1;" vertex="1" parent="MEDIO_PAGO" connectable="0">
+          <mxGeometry x="11" y="65" width="46" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="MEDIO_PAGO_row_1_field" value="codigo" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Consolas;fontSize=13;fontColor=#162C43;fontStyle=0;" vertex="1" parent="MEDIO_PAGO" connectable="0">
+          <mxGeometry x="63" y="65" width="160" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="MEDIO_PAGO_row_1_type" value="varchar(24)" style="text;html=1;align=right;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=12;fontColor=#50677D;fontStyle=0;" vertex="1" parent="MEDIO_PAGO" connectable="0">
+          <mxGeometry x="218" y="65" width="96" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="MEDIO_PAGO_row_2_stripe" value="" style="rounded=1;absoluteArcSize=1;arcSize=11;html=1;fillColor=#F4F7FB;strokeColor=none;strokeWidth=1.3;selectable=0;editable=0;movable=0;" vertex="1" parent="MEDIO_PAGO" connectable="0">
+          <mxGeometry x="7" y="91" width="316" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="MEDIO_PAGO_row_2_field" value="nombre" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Consolas;fontSize=13;fontColor=#162C43;fontStyle=0;" vertex="1" parent="MEDIO_PAGO" connectable="0">
+          <mxGeometry x="63" y="90" width="160" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="MEDIO_PAGO_row_2_type" value="nvarchar(60)" style="text;html=1;align=right;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=12;fontColor=#50677D;fontStyle=0;" vertex="1" parent="MEDIO_PAGO" connectable="0">
+          <mxGeometry x="218" y="90" width="96" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="MEDIO_PAGO_row_3_field" value="activo" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Consolas;fontSize=13;fontColor=#162C43;fontStyle=0;" vertex="1" parent="MEDIO_PAGO" connectable="0">
+          <mxGeometry x="63" y="115" width="160" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="MEDIO_PAGO_row_3_type" value="bit" style="text;html=1;align=right;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=12;fontColor=#50677D;fontStyle=0;" vertex="1" parent="MEDIO_PAGO" connectable="0">
+          <mxGeometry x="218" y="115" width="96" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="MEDIO_PAGO_rule_bg" value="" style="rounded=1;absoluteArcSize=1;arcSize=11;html=1;fillColor=#EAF0F7;strokeColor=none;strokeWidth=1.3;" vertex="1" parent="MEDIO_PAGO" connectable="0">
+          <mxGeometry x="7" y="144" width="316" height="23" as="geometry"/>
+        </mxCell>
+        <mxCell id="MEDIO_PAGO_rule" value="Efectivo · Yape · Transferencia" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=11;fontColor=#50677D;fontStyle=1;" vertex="1" parent="MEDIO_PAGO" connectable="0">
+          <mxGeometry x="15" y="144" width="300" height="23" as="geometry"/>
+        </mxCell>
+        <mxCell id="PAGO" parent="1" style="rounded=1;absoluteArcSize=1;arcSize=11;html=1;fillColor=#FFFFFF;strokeColor=#CCD8E5;strokeWidth=1.3;container=1;collapsible=0;recursiveResize=0;" value="" vertex="1">
+          <mxGeometry height="252" width="356" x="1270" y="974" as="geometry"/>
+        </mxCell>
+        <mxCell id="PAGO_header" connectable="0" parent="PAGO" style="rounded=1;absoluteArcSize=1;arcSize=11;html=1;fillColor=#594678;strokeColor=none;strokeWidth=1.3;" value="" vertex="1">
+          <mxGeometry height="35" width="350" x="3" y="3" as="geometry"/>
+        </mxCell>
+        <mxCell id="PAGO_title" connectable="0" parent="PAGO" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=17;fontColor=#FFFFFF;fontStyle=1;" value="PAGO" vertex="1">
+          <mxGeometry height="35" width="326" x="15" y="3" as="geometry"/>
+        </mxCell>
+        <mxCell id="PAGO_row_0_stripe" connectable="0" parent="PAGO" style="rounded=1;absoluteArcSize=1;arcSize=11;html=1;fillColor=#F4F7FB;strokeColor=none;strokeWidth=1.3;selectable=0;editable=0;movable=0;" value="" vertex="1">
+          <mxGeometry height="24" width="342" x="7" y="41" as="geometry"/>
+        </mxCell>
+        <mxCell id="PAGO_row_0_key" connectable="0" parent="PAGO" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=11;fontColor=#28559A;fontStyle=1;" value="PK" vertex="1">
+          <mxGeometry height="25" width="46" x="11" y="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="PAGO_row_0_field" connectable="0" parent="PAGO" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Consolas;fontSize=13;fontColor=#162C43;fontStyle=0;" value="pago_id" vertex="1">
+          <mxGeometry height="25" width="186" x="63" y="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="PAGO_row_0_type" connectable="0" parent="PAGO" style="text;html=1;align=right;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=12;fontColor=#50677D;fontStyle=0;" value="int" vertex="1">
+          <mxGeometry height="25" width="96" x="244" y="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="PAGO_row_1_key" connectable="0" parent="PAGO" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=11;fontColor=#246450;fontStyle=1;" value="FK" vertex="1">
+          <mxGeometry height="25" width="46" x="11" y="65" as="geometry"/>
+        </mxCell>
+        <mxCell id="PAGO_row_1_field" connectable="0" parent="PAGO" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Consolas;fontSize=13;fontColor=#162C43;fontStyle=0;" value="pedido_id" vertex="1">
+          <mxGeometry height="25" width="186" x="63" y="65" as="geometry"/>
+        </mxCell>
+        <mxCell id="PAGO_row_1_type" connectable="0" parent="PAGO" style="text;html=1;align=right;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=12;fontColor=#50677D;fontStyle=0;" value="int" vertex="1">
+          <mxGeometry height="25" width="96" x="244" y="65" as="geometry"/>
+        </mxCell>
+        <mxCell id="PAGO_row_2_stripe" connectable="0" parent="PAGO" style="rounded=1;absoluteArcSize=1;arcSize=11;html=1;fillColor=#F4F7FB;strokeColor=none;strokeWidth=1.3;selectable=0;editable=0;movable=0;" value="" vertex="1">
+          <mxGeometry height="24" width="342" x="7" y="91" as="geometry"/>
+        </mxCell>
+        <mxCell id="PAGO_row_2_key" value="FK" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=11;fontColor=#246450;fontStyle=1;" vertex="1" parent="PAGO" connectable="0">
+          <mxGeometry x="11" y="90" width="46" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="PAGO_row_2_field" connectable="0" parent="PAGO" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Consolas;fontSize=13;fontColor=#162C43;fontStyle=0;" value="medio_pago_id" vertex="1">
+          <mxGeometry height="25" width="186" x="63" y="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="PAGO_row_2_type" connectable="0" parent="PAGO" style="text;html=1;align=right;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=12;fontColor=#50677D;fontStyle=0;" value="tinyint" vertex="1">
+          <mxGeometry height="25" width="96" x="244" y="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="PAGO_row_3_field" connectable="0" parent="PAGO" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Consolas;fontSize=13;fontColor=#162C43;fontStyle=0;" value="monto" vertex="1">
+          <mxGeometry height="25" width="186" x="63" y="115" as="geometry"/>
+        </mxCell>
+        <mxCell id="PAGO_row_3_type" connectable="0" parent="PAGO" style="text;html=1;align=right;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=12;fontColor=#50677D;fontStyle=0;" value="decimal(12,2)" vertex="1">
+          <mxGeometry height="25" width="96" x="244" y="115" as="geometry"/>
+        </mxCell>
+        <mxCell id="PAGO_row_4_stripe" connectable="0" parent="PAGO" style="rounded=1;absoluteArcSize=1;arcSize=11;html=1;fillColor=#F4F7FB;strokeColor=none;strokeWidth=1.3;selectable=0;editable=0;movable=0;" value="" vertex="1">
+          <mxGeometry height="24" width="342" x="7" y="141" as="geometry"/>
+        </mxCell>
+        <mxCell id="PAGO_row_4_field" connectable="0" parent="PAGO" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Consolas;fontSize=13;fontColor=#162C43;fontStyle=0;" value="registrado_en" vertex="1">
+          <mxGeometry height="25" width="186" x="63" y="140" as="geometry"/>
+        </mxCell>
+        <mxCell id="PAGO_row_4_type" connectable="0" parent="PAGO" style="text;html=1;align=right;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=12;fontColor=#50677D;fontStyle=0;" value="datetime2" vertex="1">
+          <mxGeometry height="25" width="96" x="244" y="140" as="geometry"/>
+        </mxCell>
+        <mxCell id="PAGO_row_5_key" connectable="0" parent="PAGO" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=11;fontColor=#246450;fontStyle=1;" value="FK" vertex="1">
+          <mxGeometry height="25" width="46" x="11" y="165" as="geometry"/>
+        </mxCell>
+        <mxCell id="PAGO_row_5_field" connectable="0" parent="PAGO" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Consolas;fontSize=13;fontColor=#162C43;fontStyle=0;" value="estado_pago_id" vertex="1">
+          <mxGeometry height="25" width="186" x="63" y="165" as="geometry"/>
+        </mxCell>
+        <mxCell id="PAGO_row_5_type" connectable="0" parent="PAGO" style="text;html=1;align=right;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=12;fontColor=#50677D;fontStyle=0;" value="tinyint" vertex="1">
+          <mxGeometry height="25" width="96" x="244" y="165" as="geometry"/>
+        </mxCell>
+        <mxCell id="PAGO_row_6_stripe" connectable="0" parent="PAGO" style="rounded=1;absoluteArcSize=1;arcSize=11;html=1;fillColor=#F4F7FB;strokeColor=none;strokeWidth=1.3;selectable=0;editable=0;movable=0;" value="" vertex="1">
+          <mxGeometry height="24" width="342" x="7" y="191" as="geometry"/>
+        </mxCell>
+        <mxCell id="PAGO_row_6_field" connectable="0" parent="PAGO" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Consolas;fontSize=13;fontColor=#162C43;fontStyle=0;" value="referencia" vertex="1">
+          <mxGeometry height="25" width="186" x="63" y="190" as="geometry"/>
+        </mxCell>
+        <mxCell id="PAGO_row_6_type" connectable="0" parent="PAGO" style="text;html=1;align=right;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=12;fontColor=#50677D;fontStyle=0;" value="varchar(100)?" vertex="1">
+          <mxGeometry height="25" width="96" x="244" y="190" as="geometry"/>
+        </mxCell>
+        <mxCell id="PAGO_rule_bg" connectable="0" parent="PAGO" style="rounded=1;absoluteArcSize=1;arcSize=11;html=1;fillColor=#EAF0F7;strokeColor=none;strokeWidth=1.3;" value="" vertex="1">
+          <mxGeometry height="23" width="342" x="7" y="219" as="geometry"/>
+        </mxCell>
+        <mxCell id="PAGO_rule" connectable="0" parent="PAGO" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=11;fontColor=#50677D;fontStyle=1;" value="CHECK · monto &gt; 0" vertex="1">
+          <mxGeometry height="23" width="326" x="15" y="219" as="geometry"/>
+        </mxCell>
+        <mxCell id="TRANSPORTISTA" parent="1" style="rounded=1;absoluteArcSize=1;arcSize=11;html=1;fillColor=#FFFFFF;strokeColor=#CCD8E5;strokeWidth=1.3;container=1;collapsible=0;recursiveResize=0;" value="" vertex="1">
+          <mxGeometry height="150" width="334" x="1724" y="183" as="geometry"/>
+        </mxCell>
+        <mxCell id="TRANSPORTISTA_header" connectable="0" parent="TRANSPORTISTA" style="rounded=1;absoluteArcSize=1;arcSize=11;html=1;fillColor=#21587B;strokeColor=none;strokeWidth=1.3;" value="" vertex="1">
+          <mxGeometry height="35" width="328" x="3" y="3" as="geometry"/>
+        </mxCell>
+        <mxCell id="TRANSPORTISTA_title" connectable="0" parent="TRANSPORTISTA" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=17;fontColor=#FFFFFF;fontStyle=1;" value="TRANSPORTISTA" vertex="1">
+          <mxGeometry height="35" width="304" x="15" y="3" as="geometry"/>
+        </mxCell>
+        <mxCell id="TRANSPORTISTA_row_0_stripe" connectable="0" parent="TRANSPORTISTA" style="rounded=1;absoluteArcSize=1;arcSize=11;html=1;fillColor=#F4F7FB;strokeColor=none;strokeWidth=1.3;selectable=0;editable=0;movable=0;" value="" vertex="1">
+          <mxGeometry height="24" width="320" x="7" y="41" as="geometry"/>
+        </mxCell>
+        <mxCell id="TRANSPORTISTA_row_0_key" connectable="0" parent="TRANSPORTISTA" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=11;fontColor=#28559A;fontStyle=1;" value="PK" vertex="1">
+          <mxGeometry height="25" width="46" x="11" y="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="TRANSPORTISTA_row_0_field" connectable="0" parent="TRANSPORTISTA" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Consolas;fontSize=13;fontColor=#162C43;fontStyle=0;" value="transportista_id" vertex="1">
+          <mxGeometry height="25" width="164" x="63" y="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="TRANSPORTISTA_row_0_type" connectable="0" parent="TRANSPORTISTA" style="text;html=1;align=right;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=12;fontColor=#50677D;fontStyle=0;" value="int" vertex="1">
+          <mxGeometry height="25" width="96" x="222" y="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="TRANSPORTISTA_row_1_key" connectable="0" parent="TRANSPORTISTA" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=11;fontColor=#694A89;fontStyle=1;" value="UQ" vertex="1">
+          <mxGeometry height="25" width="46" x="11" y="65" as="geometry"/>
+        </mxCell>
+        <mxCell id="TRANSPORTISTA_row_1_field" connectable="0" parent="TRANSPORTISTA" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Consolas;fontSize=13;fontColor=#162C43;fontStyle=0;" value="ruc" vertex="1">
+          <mxGeometry height="25" width="164" x="63" y="65" as="geometry"/>
+        </mxCell>
+        <mxCell id="TRANSPORTISTA_row_1_type" connectable="0" parent="TRANSPORTISTA" style="text;html=1;align=right;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=12;fontColor=#50677D;fontStyle=0;" value="char(11)" vertex="1">
+          <mxGeometry height="25" width="96" x="222" y="65" as="geometry"/>
+        </mxCell>
+        <mxCell id="TRANSPORTISTA_row_2_stripe" connectable="0" parent="TRANSPORTISTA" style="rounded=1;absoluteArcSize=1;arcSize=11;html=1;fillColor=#F4F7FB;strokeColor=none;strokeWidth=1.3;selectable=0;editable=0;movable=0;" value="" vertex="1">
+          <mxGeometry height="24" width="320" x="7" y="91" as="geometry"/>
+        </mxCell>
+        <mxCell id="TRANSPORTISTA_row_2_field" connectable="0" parent="TRANSPORTISTA" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Consolas;fontSize=13;fontColor=#162C43;fontStyle=0;" value="razon_social" vertex="1">
+          <mxGeometry height="25" width="164" x="63" y="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="TRANSPORTISTA_row_2_type" connectable="0" parent="TRANSPORTISTA" style="text;html=1;align=right;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=12;fontColor=#50677D;fontStyle=0;" value="nvarchar(160)" vertex="1">
+          <mxGeometry height="25" width="96" x="222" y="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="TRANSPORTISTA_row_3_field" connectable="0" parent="TRANSPORTISTA" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Consolas;fontSize=13;fontColor=#162C43;fontStyle=0;" value="activo" vertex="1">
+          <mxGeometry height="25" width="164" x="63" y="115" as="geometry"/>
+        </mxCell>
+        <mxCell id="TRANSPORTISTA_row_3_type" connectable="0" parent="TRANSPORTISTA" style="text;html=1;align=right;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=12;fontColor=#50677D;fontStyle=0;" value="bit" vertex="1">
+          <mxGeometry height="25" width="96" x="222" y="115" as="geometry"/>
+        </mxCell>
+        <mxCell id="ESTADO_ENVIO" parent="1" style="rounded=1;absoluteArcSize=1;arcSize=11;html=1;fillColor=#FFFFFF;strokeColor=#CCD8E5;strokeWidth=1.3;container=1;collapsible=0;recursiveResize=0;" value="" vertex="1">
+          <mxGeometry height="152" width="334" x="1724" y="379" as="geometry"/>
+        </mxCell>
+        <mxCell id="ESTADO_ENVIO_header" connectable="0" parent="ESTADO_ENVIO" style="rounded=1;absoluteArcSize=1;arcSize=11;html=1;fillColor=#21587B;strokeColor=none;strokeWidth=1.3;" value="" vertex="1">
+          <mxGeometry height="35" width="328" x="3" y="3" as="geometry"/>
+        </mxCell>
+        <mxCell id="ESTADO_ENVIO_title" connectable="0" parent="ESTADO_ENVIO" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=17;fontColor=#FFFFFF;fontStyle=1;" value="ESTADO_ENVIO" vertex="1">
+          <mxGeometry height="35" width="304" x="15" y="3" as="geometry"/>
+        </mxCell>
+        <mxCell id="ESTADO_ENVIO_row_0_stripe" connectable="0" parent="ESTADO_ENVIO" style="rounded=1;absoluteArcSize=1;arcSize=11;html=1;fillColor=#F4F7FB;strokeColor=none;strokeWidth=1.3;selectable=0;editable=0;movable=0;" value="" vertex="1">
+          <mxGeometry height="24" width="320" x="7" y="41" as="geometry"/>
+        </mxCell>
+        <mxCell id="ESTADO_ENVIO_row_0_key" connectable="0" parent="ESTADO_ENVIO" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=11;fontColor=#28559A;fontStyle=1;" value="PK" vertex="1">
+          <mxGeometry height="25" width="46" x="11" y="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="ESTADO_ENVIO_row_0_field" connectable="0" parent="ESTADO_ENVIO" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Consolas;fontSize=13;fontColor=#162C43;fontStyle=0;" value="estado_envio_id" vertex="1">
+          <mxGeometry height="25" width="164" x="63" y="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="ESTADO_ENVIO_row_0_type" connectable="0" parent="ESTADO_ENVIO" style="text;html=1;align=right;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=12;fontColor=#50677D;fontStyle=0;" value="tinyint" vertex="1">
+          <mxGeometry height="25" width="96" x="222" y="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="ESTADO_ENVIO_row_1_key" connectable="0" parent="ESTADO_ENVIO" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=11;fontColor=#694A89;fontStyle=1;" value="UQ" vertex="1">
+          <mxGeometry height="25" width="46" x="11" y="65" as="geometry"/>
+        </mxCell>
+        <mxCell id="ESTADO_ENVIO_row_1_field" connectable="0" parent="ESTADO_ENVIO" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Consolas;fontSize=13;fontColor=#162C43;fontStyle=0;" value="codigo" vertex="1">
+          <mxGeometry height="25" width="164" x="63" y="65" as="geometry"/>
+        </mxCell>
+        <mxCell id="ESTADO_ENVIO_row_1_type" connectable="0" parent="ESTADO_ENVIO" style="text;html=1;align=right;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=12;fontColor=#50677D;fontStyle=0;" value="varchar(16)" vertex="1">
+          <mxGeometry height="25" width="96" x="222" y="65" as="geometry"/>
+        </mxCell>
+        <mxCell id="ESTADO_ENVIO_row_2_stripe" connectable="0" parent="ESTADO_ENVIO" style="rounded=1;absoluteArcSize=1;arcSize=11;html=1;fillColor=#F4F7FB;strokeColor=none;strokeWidth=1.3;selectable=0;editable=0;movable=0;" value="" vertex="1">
+          <mxGeometry height="24" width="320" x="7" y="91" as="geometry"/>
+        </mxCell>
+        <mxCell id="ESTADO_ENVIO_row_2_field" connectable="0" parent="ESTADO_ENVIO" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Consolas;fontSize=13;fontColor=#162C43;fontStyle=0;" value="nombre" vertex="1">
+          <mxGeometry height="25" width="164" x="63" y="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="ESTADO_ENVIO_row_2_type" connectable="0" parent="ESTADO_ENVIO" style="text;html=1;align=right;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=12;fontColor=#50677D;fontStyle=0;" value="nvarchar(60)" vertex="1">
+          <mxGeometry height="25" width="96" x="222" y="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="ESTADO_ENVIO_rule_bg" connectable="0" parent="ESTADO_ENVIO" style="rounded=1;absoluteArcSize=1;arcSize=11;html=1;fillColor=#EAF0F7;strokeColor=none;strokeWidth=1.3;" value="" vertex="1">
+          <mxGeometry height="23" width="320" x="7" y="119" as="geometry"/>
+        </mxCell>
+        <mxCell id="ESTADO_ENVIO_rule" connectable="0" parent="ESTADO_ENVIO" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=11;fontColor=#50677D;fontStyle=1;" value="Pendiente · Despachado · Entregado" vertex="1">
+          <mxGeometry height="23" width="304" x="15" y="119" as="geometry"/>
+        </mxCell>
+        <mxCell id="ENVIO" parent="1" style="rounded=1;absoluteArcSize=1;arcSize=11;html=1;fillColor=#FFFFFF;strokeColor=#CCD8E5;strokeWidth=1.3;container=1;collapsible=0;recursiveResize=0;" value="" vertex="1">
+          <mxGeometry height="250" width="334" x="1724" y="591" as="geometry"/>
+        </mxCell>
+        <mxCell id="ENVIO_header" connectable="0" parent="ENVIO" style="rounded=1;absoluteArcSize=1;arcSize=11;html=1;fillColor=#21587B;strokeColor=none;strokeWidth=1.3;" value="" vertex="1">
+          <mxGeometry height="35" width="328" x="3" y="3" as="geometry"/>
+        </mxCell>
+        <mxCell id="ENVIO_title" connectable="0" parent="ENVIO" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=17;fontColor=#FFFFFF;fontStyle=1;" value="ENVIO" vertex="1">
+          <mxGeometry height="35" width="304" x="15" y="3" as="geometry"/>
+        </mxCell>
+        <mxCell id="ENVIO_row_0_stripe" connectable="0" parent="ENVIO" style="rounded=1;absoluteArcSize=1;arcSize=11;html=1;fillColor=#F4F7FB;strokeColor=none;strokeWidth=1.3;selectable=0;editable=0;movable=0;" value="" vertex="1">
+          <mxGeometry height="24" width="320" x="7" y="41" as="geometry"/>
+        </mxCell>
+        <mxCell id="ENVIO_row_0_key" connectable="0" parent="ENVIO" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=11;fontColor=#28559A;fontStyle=1;" value="PK" vertex="1">
+          <mxGeometry height="25" width="46" x="11" y="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="ENVIO_row_0_field" connectable="0" parent="ENVIO" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Consolas;fontSize=13;fontColor=#162C43;fontStyle=0;" value="envio_id" vertex="1">
+          <mxGeometry height="25" width="164" x="63" y="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="ENVIO_row_0_type" connectable="0" parent="ENVIO" style="text;html=1;align=right;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=12;fontColor=#50677D;fontStyle=0;" value="int" vertex="1">
+          <mxGeometry height="25" width="96" x="222" y="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="ENVIO_row_1_key" connectable="0" parent="ENVIO" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=11;fontColor=#246450;fontStyle=1;" value="FK UQ" vertex="1">
+          <mxGeometry height="25" width="46" x="11" y="65" as="geometry"/>
+        </mxCell>
+        <mxCell id="ENVIO_row_1_field" connectable="0" parent="ENVIO" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Consolas;fontSize=13;fontColor=#162C43;fontStyle=0;" value="pedido_id" vertex="1">
+          <mxGeometry height="25" width="164" x="63" y="65" as="geometry"/>
+        </mxCell>
+        <mxCell id="ENVIO_row_1_type" connectable="0" parent="ENVIO" style="text;html=1;align=right;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=12;fontColor=#50677D;fontStyle=0;" value="int" vertex="1">
+          <mxGeometry height="25" width="96" x="222" y="65" as="geometry"/>
+        </mxCell>
+        <mxCell id="ENVIO_row_2_stripe" connectable="0" parent="ENVIO" style="rounded=1;absoluteArcSize=1;arcSize=11;html=1;fillColor=#F4F7FB;strokeColor=none;strokeWidth=1.3;selectable=0;editable=0;movable=0;" value="" vertex="1">
+          <mxGeometry height="24" width="320" x="7" y="91" as="geometry"/>
+        </mxCell>
+        <mxCell id="ENVIO_row_2_field" connectable="0" parent="ENVIO" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Consolas;fontSize=13;fontColor=#162C43;fontStyle=0;" value="punto_partida" vertex="1">
+          <mxGeometry height="25" width="164" x="63" y="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="ENVIO_row_2_type" connectable="0" parent="ENVIO" style="text;html=1;align=right;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=12;fontColor=#50677D;fontStyle=0;" value="nvarchar(220)" vertex="1">
+          <mxGeometry height="25" width="96" x="222" y="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="ENVIO_row_3_field" connectable="0" parent="ENVIO" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Consolas;fontSize=13;fontColor=#162C43;fontStyle=0;" value="punto_llegada" vertex="1">
+          <mxGeometry height="25" width="164" x="63" y="115" as="geometry"/>
+        </mxCell>
+        <mxCell id="ENVIO_row_3_type" connectable="0" parent="ENVIO" style="text;html=1;align=right;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=12;fontColor=#50677D;fontStyle=0;" value="nvarchar(220)" vertex="1">
+          <mxGeometry height="25" width="96" x="222" y="115" as="geometry"/>
+        </mxCell>
+        <mxCell id="ENVIO_row_4_stripe" connectable="0" parent="ENVIO" style="rounded=1;absoluteArcSize=1;arcSize=11;html=1;fillColor=#F4F7FB;strokeColor=none;strokeWidth=1.3;selectable=0;editable=0;movable=0;" value="" vertex="1">
+          <mxGeometry height="24" width="320" x="7" y="141" as="geometry"/>
+        </mxCell>
+        <mxCell id="ENVIO_row_4_field" connectable="0" parent="ENVIO" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Consolas;fontSize=13;fontColor=#162C43;fontStyle=0;" value="fecha_programada" vertex="1">
+          <mxGeometry height="25" width="164" x="63" y="140" as="geometry"/>
+        </mxCell>
+        <mxCell id="ENVIO_row_4_type" connectable="0" parent="ENVIO" style="text;html=1;align=right;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=12;fontColor=#50677D;fontStyle=0;" value="date?" vertex="1">
+          <mxGeometry height="25" width="96" x="222" y="140" as="geometry"/>
+        </mxCell>
+        <mxCell id="ENVIO_row_5_field" connectable="0" parent="ENVIO" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Consolas;fontSize=13;fontColor=#162C43;fontStyle=0;" value="modalidad" vertex="1">
+          <mxGeometry height="25" width="164" x="63" y="165" as="geometry"/>
+        </mxCell>
+        <mxCell id="ENVIO_row_5_type" connectable="0" parent="ENVIO" style="text;html=1;align=right;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=12;fontColor=#50677D;fontStyle=0;" value="varchar(12)" vertex="1">
+          <mxGeometry height="25" width="96" x="222" y="165" as="geometry"/>
+        </mxCell>
+        <mxCell id="ENVIO_row_6_stripe" connectable="0" parent="ENVIO" style="rounded=1;absoluteArcSize=1;arcSize=11;html=1;fillColor=#F4F7FB;strokeColor=none;strokeWidth=1.3;selectable=0;editable=0;movable=0;" value="" vertex="1">
+          <mxGeometry height="24" width="320" x="7" y="191" as="geometry"/>
+        </mxCell>
+        <mxCell id="ENVIO_row_6_key" connectable="0" parent="ENVIO" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=11;fontColor=#246450;fontStyle=1;" value="FK" vertex="1">
+          <mxGeometry height="25" width="46" x="11" y="190" as="geometry"/>
+        </mxCell>
+        <mxCell id="ENVIO_row_6_field" connectable="0" parent="ENVIO" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Consolas;fontSize=13;fontColor=#162C43;fontStyle=0;" value="estado_envio_id" vertex="1">
+          <mxGeometry height="25" width="164" x="63" y="190" as="geometry"/>
+        </mxCell>
+        <mxCell id="ENVIO_row_6_type" connectable="0" parent="ENVIO" style="text;html=1;align=right;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=12;fontColor=#50677D;fontStyle=0;" value="tinyint" vertex="1">
+          <mxGeometry height="25" width="96" x="222" y="190" as="geometry"/>
+        </mxCell>
+        <mxCell id="ENVIO_row_7_key" connectable="0" parent="ENVIO" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=11;fontColor=#246450;fontStyle=1;" value="FK" vertex="1">
+          <mxGeometry height="25" width="46" x="11" y="215" as="geometry"/>
+        </mxCell>
+        <mxCell id="ENVIO_row_7_field" connectable="0" parent="ENVIO" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Consolas;fontSize=13;fontColor=#162C43;fontStyle=0;" value="transportista_id" vertex="1">
+          <mxGeometry height="25" width="164" x="63" y="215" as="geometry"/>
+        </mxCell>
+        <mxCell id="ENVIO_row_7_type" connectable="0" parent="ENVIO" style="text;html=1;align=right;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=12;fontColor=#50677D;fontStyle=0;" value="int?" vertex="1">
+          <mxGeometry height="25" width="96" x="222" y="215" as="geometry"/>
+        </mxCell>
+        <mxCell id="GUIA_REMISION" parent="1" style="rounded=1;absoluteArcSize=1;arcSize=11;html=1;fillColor=#FFFFFF;strokeColor=#CCD8E5;strokeWidth=1.3;container=1;collapsible=0;recursiveResize=0;" value="" vertex="1">
+          <mxGeometry height="252" width="334" x="1724" y="906" as="geometry"/>
+        </mxCell>
+        <mxCell id="GUIA_REMISION_header" connectable="0" parent="GUIA_REMISION" style="rounded=1;absoluteArcSize=1;arcSize=11;html=1;fillColor=#21587B;strokeColor=none;strokeWidth=1.3;" value="" vertex="1">
+          <mxGeometry height="35" width="328" x="3" y="3" as="geometry"/>
+        </mxCell>
+        <mxCell id="GUIA_REMISION_title" connectable="0" parent="GUIA_REMISION" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=17;fontColor=#FFFFFF;fontStyle=1;" value="GUIA_REMISION" vertex="1">
+          <mxGeometry height="35" width="304" x="15" y="3" as="geometry"/>
+        </mxCell>
+        <mxCell id="GUIA_REMISION_row_0_stripe" connectable="0" parent="GUIA_REMISION" style="rounded=1;absoluteArcSize=1;arcSize=11;html=1;fillColor=#F4F7FB;strokeColor=none;strokeWidth=1.3;selectable=0;editable=0;movable=0;" value="" vertex="1">
+          <mxGeometry height="24" width="320" x="7" y="41" as="geometry"/>
+        </mxCell>
+        <mxCell id="GUIA_REMISION_row_0_key" connectable="0" parent="GUIA_REMISION" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=11;fontColor=#28559A;fontStyle=1;" value="PK" vertex="1">
+          <mxGeometry height="25" width="46" x="11" y="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="GUIA_REMISION_row_0_field" connectable="0" parent="GUIA_REMISION" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Consolas;fontSize=13;fontColor=#162C43;fontStyle=0;" value="guia_id" vertex="1">
+          <mxGeometry height="25" width="164" x="63" y="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="GUIA_REMISION_row_0_type" connectable="0" parent="GUIA_REMISION" style="text;html=1;align=right;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=12;fontColor=#50677D;fontStyle=0;" value="int" vertex="1">
+          <mxGeometry height="25" width="96" x="222" y="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="GUIA_REMISION_row_1_key" connectable="0" parent="GUIA_REMISION" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=11;fontColor=#246450;fontStyle=1;" value="FK" vertex="1">
+          <mxGeometry height="25" width="46" x="11" y="65" as="geometry"/>
+        </mxCell>
+        <mxCell id="GUIA_REMISION_row_1_field" connectable="0" parent="GUIA_REMISION" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Consolas;fontSize=13;fontColor=#162C43;fontStyle=0;" value="envio_id" vertex="1">
+          <mxGeometry height="25" width="164" x="63" y="65" as="geometry"/>
+        </mxCell>
+        <mxCell id="GUIA_REMISION_row_1_type" connectable="0" parent="GUIA_REMISION" style="text;html=1;align=right;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=12;fontColor=#50677D;fontStyle=0;" value="int" vertex="1">
+          <mxGeometry height="25" width="96" x="222" y="65" as="geometry"/>
+        </mxCell>
+        <mxCell id="GUIA_REMISION_row_2_stripe" connectable="0" parent="GUIA_REMISION" style="rounded=1;absoluteArcSize=1;arcSize=11;html=1;fillColor=#F4F7FB;strokeColor=none;strokeWidth=1.3;selectable=0;editable=0;movable=0;" value="" vertex="1">
+          <mxGeometry height="24" width="320" x="7" y="91" as="geometry"/>
+        </mxCell>
+        <mxCell id="GUIA_REMISION_row_2_field" connectable="0" parent="GUIA_REMISION" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Consolas;fontSize=13;fontColor=#162C43;fontStyle=0;" value="tipo" vertex="1">
+          <mxGeometry height="25" width="164" x="63" y="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="GUIA_REMISION_row_2_type" connectable="0" parent="GUIA_REMISION" style="text;html=1;align=right;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=12;fontColor=#50677D;fontStyle=0;" value="varchar(16)" vertex="1">
+          <mxGeometry height="25" width="96" x="222" y="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="GUIA_REMISION_row_3_field" connectable="0" parent="GUIA_REMISION" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Consolas;fontSize=13;fontColor=#162C43;fontStyle=0;" value="emisor_ruc" vertex="1">
+          <mxGeometry height="25" width="164" x="63" y="115" as="geometry"/>
+        </mxCell>
+        <mxCell id="GUIA_REMISION_row_3_type" connectable="0" parent="GUIA_REMISION" style="text;html=1;align=right;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=12;fontColor=#50677D;fontStyle=0;" value="char(11)" vertex="1">
+          <mxGeometry height="25" width="96" x="222" y="115" as="geometry"/>
+        </mxCell>
+        <mxCell id="GUIA_REMISION_row_4_stripe" connectable="0" parent="GUIA_REMISION" style="rounded=1;absoluteArcSize=1;arcSize=11;html=1;fillColor=#F4F7FB;strokeColor=none;strokeWidth=1.3;selectable=0;editable=0;movable=0;" value="" vertex="1">
+          <mxGeometry height="24" width="320" x="7" y="141" as="geometry"/>
+        </mxCell>
+        <mxCell id="GUIA_REMISION_row_4_field" connectable="0" parent="GUIA_REMISION" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Consolas;fontSize=13;fontColor=#162C43;fontStyle=0;" value="serie" vertex="1">
+          <mxGeometry height="25" width="164" x="63" y="140" as="geometry"/>
+        </mxCell>
+        <mxCell id="GUIA_REMISION_row_4_type" connectable="0" parent="GUIA_REMISION" style="text;html=1;align=right;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=12;fontColor=#50677D;fontStyle=0;" value="char(4)" vertex="1">
+          <mxGeometry height="25" width="96" x="222" y="140" as="geometry"/>
+        </mxCell>
+        <mxCell id="GUIA_REMISION_row_5_field" connectable="0" parent="GUIA_REMISION" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Consolas;fontSize=13;fontColor=#162C43;fontStyle=0;" value="correlativo" vertex="1">
+          <mxGeometry height="25" width="164" x="63" y="165" as="geometry"/>
+        </mxCell>
+        <mxCell id="GUIA_REMISION_row_5_type" connectable="0" parent="GUIA_REMISION" style="text;html=1;align=right;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=12;fontColor=#50677D;fontStyle=0;" value="int" vertex="1">
+          <mxGeometry height="25" width="96" x="222" y="165" as="geometry"/>
+        </mxCell>
+        <mxCell id="GUIA_REMISION_row_6_stripe" connectable="0" parent="GUIA_REMISION" style="rounded=1;absoluteArcSize=1;arcSize=11;html=1;fillColor=#F4F7FB;strokeColor=none;strokeWidth=1.3;selectable=0;editable=0;movable=0;" value="" vertex="1">
+          <mxGeometry height="24" width="320" x="7" y="191" as="geometry"/>
+        </mxCell>
+        <mxCell id="GUIA_REMISION_row_6_field" connectable="0" parent="GUIA_REMISION" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Consolas;fontSize=13;fontColor=#162C43;fontStyle=0;" value="emitida_en" vertex="1">
+          <mxGeometry height="25" width="164" x="63" y="190" as="geometry"/>
+        </mxCell>
+        <mxCell id="GUIA_REMISION_row_6_type" connectable="0" parent="GUIA_REMISION" style="text;html=1;align=right;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=12;fontColor=#50677D;fontStyle=0;" value="datetime2" vertex="1">
+          <mxGeometry height="25" width="96" x="222" y="190" as="geometry"/>
+        </mxCell>
+        <mxCell id="GUIA_REMISION_rule_bg" connectable="0" parent="GUIA_REMISION" style="rounded=1;absoluteArcSize=1;arcSize=11;html=1;fillColor=#EAF0F7;strokeColor=none;strokeWidth=1.3;" value="" vertex="1">
+          <mxGeometry height="23" width="320" x="7" y="219" as="geometry"/>
+        </mxCell>
+        <mxCell id="GUIA_REMISION_rule" connectable="0" parent="GUIA_REMISION" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;spacing=0;fontFamily=Segoe UI;fontSize=11;fontColor=#50677D;fontStyle=1;" value="UQ · emisor_ruc + tipo + serie + correlativo" vertex="1">
+          <mxGeometry height="23" width="304" x="15" y="219" as="geometry"/>
+        </mxCell>
+        <mxCell id="relation_0" edge="1" parent="1" source="CLIENTE" style="noEdgeStyle=1;rounded=1;arcSize=12;endArrow=none;startArrow=none;html=1;strokeColor=#61788F;strokeWidth=1.75;exitX=1.0000000;exitY=0.8942731;exitPerimeter=0;entryX=0.0000000;entryY=0.0920000;entryPerimeter=0;" target="PEDIDO">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="relation_0_from" connectable="0" parent="relation_0" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Segoe UI;fontSize=12;fontStyle=1;fontColor=#162C43;labelBackgroundColor=#F6F8FC;" value="1" vertex="1">
+          <mxGeometry relative="1" x="-0.5897436" as="geometry">
+            <mxPoint y="-14" as="offset"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="relation_0_to" connectable="0" parent="relation_0" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Segoe UI;fontSize=12;fontStyle=1;fontColor=#162C43;labelBackgroundColor=#F6F8FC;" value="N" vertex="1">
+          <mxGeometry relative="1" x="0.4102564" as="geometry">
+            <mxPoint y="-14" as="offset"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="relation_1" edge="1" parent="1" source="VENDEDOR" style="noEdgeStyle=1;rounded=1;arcSize=12;endArrow=none;startArrow=none;html=1;strokeColor=#61788F;strokeWidth=1.75;exitX=1.0000000;exitY=0.3533333;exitPerimeter=0;entryX=0.0000000;entryY=0.6720000;entryPerimeter=0;" target="PEDIDO">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="relation_1_from" connectable="0" parent="relation_1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Segoe UI;fontSize=12;fontStyle=1;fontColor=#162C43;labelBackgroundColor=#F6F8FC;" value="1" vertex="1">
+          <mxGeometry relative="1" x="-0.5897436" as="geometry">
+            <mxPoint y="-14" as="offset"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="relation_1_to" connectable="0" parent="relation_1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Segoe UI;fontSize=12;fontStyle=1;fontColor=#162C43;labelBackgroundColor=#F6F8FC;" value="N" vertex="1">
+          <mxGeometry relative="1" x="0.4102564" as="geometry">
+            <mxPoint y="-14" as="offset"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="relation_usuario_vendedor" edge="1" parent="1" source="USUARIO" style="noEdgeStyle=1;rounded=1;arcSize=12;endArrow=none;startArrow=none;html=1;strokeColor=#61788F;strokeWidth=1.75;exitX=1.0000000;exitY=0.4361233;exitPerimeter=0;entryX=0.0000000;entryY=0.3533333;entryPerimeter=0;" target="VENDEDOR">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="relation_usuario_vendedor_from" connectable="0" parent="relation_usuario_vendedor" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Segoe UI;fontSize=12;fontStyle=1;fontColor=#162C43;labelBackgroundColor=#F6F8FC;" value="1" vertex="1">
+          <mxGeometry relative="1" x="-0.5897436" as="geometry">
+            <mxPoint y="-14" as="offset"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="relation_usuario_vendedor_to" connectable="0" parent="relation_usuario_vendedor" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Segoe UI;fontSize=12;fontStyle=1;fontColor=#162C43;labelBackgroundColor=#F6F8FC;" value="1" vertex="1">
+          <mxGeometry relative="1" x="0.4102564" as="geometry">
+            <mxPoint y="-14" as="offset"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="relation_2" edge="1" parent="1" source="PRODUCTO" style="noEdgeStyle=1;rounded=1;arcSize=12;endArrow=none;startArrow=none;html=1;strokeColor=#61788F;strokeWidth=1.75;exitX=1.0000000;exitY=0.4457143;exitPerimeter=0;entryX=0.0000000;entryY=0.5350000;entryPerimeter=0;" target="PEDIDO_DETALLE">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="relation_2_from" connectable="0" parent="relation_2" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Segoe UI;fontSize=12;fontStyle=1;fontColor=#162C43;labelBackgroundColor=#F6F8FC;" value="1" vertex="1">
+          <mxGeometry relative="1" x="-0.5897436" as="geometry">
+            <mxPoint y="-14" as="offset"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="relation_2_to" connectable="0" parent="relation_2" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Segoe UI;fontSize=12;fontStyle=1;fontColor=#162C43;labelBackgroundColor=#F6F8FC;" value="N" vertex="1">
+          <mxGeometry relative="1" x="0.4102564" as="geometry">
+            <mxPoint y="-14" as="offset"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="relation_3" edge="1" parent="1" source="PEDIDO" style="noEdgeStyle=1;rounded=1;arcSize=12;endArrow=none;startArrow=none;html=1;strokeColor=#61788F;strokeWidth=1.75;exitX=0.5000000;exitY=1.0000000;exitPerimeter=0;entryX=0.5000000;entryY=0.0000000;entryPerimeter=0;" target="PEDIDO_DETALLE">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="relation_3_from" connectable="0" parent="relation_3" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Segoe UI;fontSize=12;fontStyle=1;fontColor=#162C43;labelBackgroundColor=#F6F8FC;" value="1" vertex="1">
+          <mxGeometry relative="1" x="-0.7241379" as="geometry">
+            <mxPoint x="23" as="offset"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="relation_3_to" connectable="0" parent="relation_3" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Segoe UI;fontSize=12;fontStyle=1;fontColor=#162C43;labelBackgroundColor=#F6F8FC;" value="N" vertex="1">
+          <mxGeometry relative="1" x="0.6034483" as="geometry">
+            <mxPoint x="25" as="offset"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="relation_4" edge="1" parent="1" source="PEDIDO" style="noEdgeStyle=1;rounded=1;arcSize=12;endArrow=none;startArrow=none;html=1;strokeColor=#61788F;strokeWidth=1.75;exitX=1.0000000;exitY=0.3240000;exitPerimeter=0;entryX=0.0000000;entryY=0.2682119;entryPerimeter=0;" target="COMPROBANTE">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="relation_4_from" connectable="0" parent="relation_4" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Segoe UI;fontSize=12;fontStyle=1;fontColor=#162C43;labelBackgroundColor=#F6F8FC;" value="1" vertex="1">
+          <mxGeometry x="-0.6666667" y="0" relative="1" as="geometry">
+            <mxPoint x="0" y="-14" as="offset"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="relation_4_to" connectable="0" parent="relation_4" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Segoe UI;fontSize=12;fontStyle=1;fontColor=#162C43;labelBackgroundColor=#F6F8FC;" value="1" vertex="1">
+          <mxGeometry x="0.5208333" y="0" relative="1" as="geometry">
+            <mxPoint x="0" y="-14" as="offset"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="relation_5" edge="1" parent="1" source="PEDIDO" style="noEdgeStyle=1;rounded=1;arcSize=12;endArrow=none;startArrow=none;html=1;strokeColor=#61788F;strokeWidth=1.75;exitX=1.0000000;exitY=0.7680000;exitPerimeter=0;entryX=0.0000000;entryY=0.3611111;entryPerimeter=0;" target="PAGO">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1218" y="584"/>
+              <mxPoint x="1218" y="1065"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="relation_5_from" connectable="0" parent="relation_5" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Segoe UI;fontSize=12;fontStyle=1;fontColor=#162C43;labelBackgroundColor=#F6F8FC;" value="1" vertex="1">
+          <mxGeometry relative="1" x="-0.9445407" as="geometry">
+            <mxPoint y="-14" as="offset"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="relation_5_to" connectable="0" parent="relation_5" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Segoe UI;fontSize=12;fontStyle=1;fontColor=#162C43;labelBackgroundColor=#F6F8FC;" value="N" vertex="1">
+          <mxGeometry relative="1" x="0.9202773" as="geometry">
+            <mxPoint y="-14" as="offset"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="relation_6" edge="1" parent="1" source="PEDIDO" style="noEdgeStyle=1;rounded=1;arcSize=12;endArrow=none;startArrow=none;html=1;strokeColor=#61788F;strokeWidth=1.75;exitX=1.0000000;exitY=0.1000000;exitPerimeter=0;entryX=0.0000000;entryY=0.2360000;entryPerimeter=0;" target="ENVIO">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1218" y="417"/>
+              <mxPoint x="1218" y="132"/>
+              <mxPoint x="1674" y="132"/>
+              <mxPoint x="1674" y="650"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="relation_6_from" connectable="0" parent="relation_6" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Segoe UI;fontSize=12;fontStyle=1;fontColor=#162C43;labelBackgroundColor=#F6F8FC;" value="1" vertex="1">
+          <mxGeometry relative="1" x="-0.9763489" as="geometry">
+            <mxPoint y="-14" as="offset"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="relation_6_to" connectable="0" parent="relation_6" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Segoe UI;fontSize=12;fontStyle=1;fontColor=#162C43;labelBackgroundColor=#F6F8FC;" value="1" vertex="1">
+          <mxGeometry relative="1" x="0.9660015" as="geometry">
+            <mxPoint y="-14" as="offset"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="relation_7" edge="1" parent="1" source="ENVIO" style="noEdgeStyle=1;rounded=1;arcSize=12;endArrow=none;startArrow=none;html=1;strokeColor=#61788F;strokeWidth=1.75;exitX=0.5000000;exitY=1.0000000;exitPerimeter=0;entryX=0.5000000;entryY=0.0000000;entryPerimeter=0;" target="GUIA_REMISION">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="relation_7_from" connectable="0" parent="relation_7" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Segoe UI;fontSize=12;fontStyle=1;fontColor=#162C43;labelBackgroundColor=#F6F8FC;" value="1" vertex="1">
+          <mxGeometry relative="1" x="-0.5076923" as="geometry">
+            <mxPoint x="23" as="offset"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="relation_7_to" connectable="0" parent="relation_7" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Segoe UI;fontSize=12;fontStyle=1;fontColor=#162C43;labelBackgroundColor=#F6F8FC;" value="N" vertex="1">
+          <mxGeometry relative="1" x="0.2923077" as="geometry">
+            <mxPoint x="25" as="offset"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="relation_8" edge="1" parent="1" source="TRANSPORTISTA" style="noEdgeStyle=1;rounded=1;arcSize=12;endArrow=none;startArrow=none;html=1;strokeColor=#61788F;strokeWidth=1.75;exitX=1.0000000;exitY=0.4600000;exitPerimeter=0;entryX=1.0000000;entryY=0.2560000;entryPerimeter=0;" target="ENVIO">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2121" y="252"/>
+              <mxPoint x="2121" y="655"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="relation_8_from" connectable="0" parent="relation_8" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Segoe UI;fontSize=12;fontStyle=1;fontColor=#162C43;labelBackgroundColor=#F6F8FC;" value="1" vertex="1">
+          <mxGeometry relative="1" x="-0.9395085" as="geometry">
+            <mxPoint y="-14" as="offset"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="relation_8_to" connectable="0" parent="relation_8" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Segoe UI;fontSize=12;fontStyle=1;fontColor=#162C43;labelBackgroundColor=#F6F8FC;" value="N" vertex="1">
+          <mxGeometry relative="1" x="0.9130435" as="geometry">
+            <mxPoint y="-14" as="offset"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="relation_9" edge="1" parent="1" source="ROL" style="noEdgeStyle=1;rounded=1;arcSize=12;endArrow=none;startArrow=none;html=1;strokeColor=#61788F;strokeWidth=1.75;exitX=0.5000000;exitY=1.0000000;exitPerimeter=0;entryX=0.5000000;entryY=0.0000000;entryPerimeter=0;" target="USUARIO">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="relation_9_from" connectable="0" parent="relation_9" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Segoe UI;fontSize=12;fontStyle=1;fontColor=#162C43;labelBackgroundColor=#F6F8FC;" value="1" vertex="1">
+          <mxGeometry relative="1" x="-0.6734694" as="geometry">
+            <mxPoint x="23" as="offset"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="relation_9_to" connectable="0" parent="relation_9" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Segoe UI;fontSize=12;fontStyle=1;fontColor=#162C43;labelBackgroundColor=#F6F8FC;" value="N" vertex="1">
+          <mxGeometry relative="1" x="0.5306122" as="geometry">
+            <mxPoint x="25" as="offset"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="relation_11" edge="1" parent="1" source="ESTADO_PEDIDO" style="noEdgeStyle=1;rounded=1;arcSize=12;endArrow=none;startArrow=none;html=1;strokeColor=#61788F;strokeWidth=1.75;exitX=0.5000000;exitY=1.0000000;exitPerimeter=0;entryX=0.5000000;entryY=0.0000000;entryPerimeter=0;" target="PEDIDO">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="relation_11_from" connectable="0" parent="relation_11" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Segoe UI;fontSize=12;fontStyle=1;fontColor=#162C43;labelBackgroundColor=#F6F8FC;" value="1" vertex="1">
+          <mxGeometry relative="1" x="-0.4385965" as="geometry">
+            <mxPoint x="23" as="offset"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="relation_11_to" connectable="0" parent="relation_11" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Segoe UI;fontSize=12;fontStyle=1;fontColor=#162C43;labelBackgroundColor=#F6F8FC;" value="N" vertex="1">
+          <mxGeometry relative="1" x="0.1929825" as="geometry">
+            <mxPoint x="25" as="offset"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="relation_12" edge="1" parent="1" source="ESTADO_COMPROBANTE" style="noEdgeStyle=1;rounded=1;arcSize=12;endArrow=none;startArrow=none;html=1;strokeColor=#61788F;strokeWidth=1.75;exitX=0.5000000;exitY=1.0000000;exitPerimeter=0;entryX=0.5000000;entryY=0.0000000;entryPerimeter=0;" target="COMPROBANTE">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="relation_12_from" connectable="0" parent="relation_12" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Segoe UI;fontSize=12;fontStyle=1;fontColor=#162C43;labelBackgroundColor=#F6F8FC;" value="1" vertex="1">
+          <mxGeometry relative="1" x="-0.4385965" as="geometry">
+            <mxPoint x="23" as="offset"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="relation_12_to" connectable="0" parent="relation_12" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Segoe UI;fontSize=12;fontStyle=1;fontColor=#162C43;labelBackgroundColor=#F6F8FC;" value="N" vertex="1">
+          <mxGeometry relative="1" x="0.1929825" as="geometry">
+            <mxPoint x="25" as="offset"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="relation_13" edge="1" parent="1" source="ESTADO_PAGO" style="noEdgeStyle=1;rounded=1;arcSize=12;endArrow=none;startArrow=none;html=1;strokeColor=#61788F;strokeWidth=1.75;exitX=0.5000000;exitY=0.0000000;exitPerimeter=0;entryX=0.5000000;entryY=1.0000000;entryPerimeter=0;" target="PAGO">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="relation_13_from" connectable="0" parent="relation_13" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Segoe UI;fontSize=12;fontStyle=1;fontColor=#162C43;labelBackgroundColor=#F6F8FC;" value="1" vertex="1">
+          <mxGeometry x="-0.4666667" y="0" relative="1" as="geometry">
+            <mxPoint x="23" y="0" as="offset"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="relation_13_to" connectable="0" parent="relation_13" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Segoe UI;fontSize=12;fontStyle=1;fontColor=#162C43;labelBackgroundColor=#F6F8FC;" value="N" vertex="1">
+          <mxGeometry x="0.2333333" y="0" relative="1" as="geometry">
+            <mxPoint x="25" y="0" as="offset"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="relation_14" edge="1" parent="1" source="ESTADO_ENVIO" style="noEdgeStyle=1;rounded=1;arcSize=12;endArrow=none;startArrow=none;html=1;strokeColor=#61788F;strokeWidth=1.75;exitX=0.5000000;exitY=1.0000000;exitPerimeter=0;entryX=0.5000000;entryY=0.0000000;entryPerimeter=0;" target="ENVIO">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="relation_14_from" connectable="0" parent="relation_14" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Segoe UI;fontSize=12;fontStyle=1;fontColor=#162C43;labelBackgroundColor=#F6F8FC;" value="1" vertex="1">
+          <mxGeometry relative="1" x="-0.4666667" as="geometry">
+            <mxPoint x="23" as="offset"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="relation_14_to" connectable="0" parent="relation_14" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Segoe UI;fontSize=12;fontStyle=1;fontColor=#162C43;labelBackgroundColor=#F6F8FC;" value="N" vertex="1">
+          <mxGeometry relative="1" x="0.2333333" as="geometry">
+            <mxPoint x="25" as="offset"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="relation_medio_pago" edge="1" parent="1" source="MEDIO_PAGO" target="PAGO" style="noEdgeStyle=1;rounded=1;arcSize=12;endArrow=none;startArrow=none;html=1;strokeColor=#61788F;strokeWidth=1.75;exitX=1.0000000;exitY=0.4350282;exitPerimeter=0;entryX=0.0000000;entryY=0.5992063;entryPerimeter=0;">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="relation_medio_pago_from" value="1" vertex="1" connectable="0" parent="relation_medio_pago" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Segoe UI;fontSize=12;fontStyle=1;fontColor=#162C43;labelBackgroundColor=#F6F8FC;">
+          <mxGeometry x="-0.6666667" y="0" relative="1" as="geometry">
+            <mxPoint x="0" y="-14" as="offset"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="relation_medio_pago_to" value="N" vertex="1" connectable="0" parent="relation_medio_pago" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Segoe UI;fontSize=12;fontStyle=1;fontColor=#162C43;labelBackgroundColor=#F6F8FC;">
+          <mxGeometry x="0.5208333" y="0" relative="1" as="geometry">
+            <mxPoint x="0" y="-14" as="offset"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="relation_serie_comprobante" edge="1" parent="1" source="SERIE_COMPROBANTE" target="COMPROBANTE" style="noEdgeStyle=1;rounded=1;arcSize=12;endArrow=none;startArrow=none;html=1;strokeColor=#61788F;strokeWidth=1.75;exitX=0.5000000;exitY=0.0000000;exitPerimeter=0;entryX=0.5000000;entryY=1.0000000;entryPerimeter=0;">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="relation_serie_comprobante_from" value="1" vertex="1" connectable="0" parent="relation_serie_comprobante" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Segoe UI;fontSize=12;fontStyle=1;fontColor=#162C43;labelBackgroundColor=#F6F8FC;">
+          <mxGeometry x="-0.4181818" y="0" relative="1" as="geometry">
+            <mxPoint x="23" y="0" as="offset"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="relation_serie_comprobante_to" value="N" vertex="1" connectable="0" parent="relation_serie_comprobante" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Segoe UI;fontSize=12;fontStyle=1;fontColor=#162C43;labelBackgroundColor=#F6F8FC;">
+          <mxGeometry x="0.1636364" y="0" relative="1" as="geometry">
+            <mxPoint x="25" y="0" as="offset"/>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
