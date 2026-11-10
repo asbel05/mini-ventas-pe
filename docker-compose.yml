@@ -4,11 +4,13 @@ services:
     container_name: mini-ventas-sql
     environment:
       - ACCEPT_EULA=Y
-      - MSSQL_SA_PASSWORD=asbel123
+      - MSSQL_SA_PASSWORD=MiniVentas123!@
       - MSSQL_PID=Developer
       - MSSQL_COLLATION=Modern_Spanish_CI_AS
     ports:
       - "1433:1433"
     volumes:
-      - ./mssql-data:/var/opt/mssql/data
+      - mssql-storage:/var/opt/mssql/data
     restart: unless-stopped
+volumes:
+  mssql-storage:
