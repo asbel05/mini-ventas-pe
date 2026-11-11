@@ -1,6 +1,6 @@
 USE MiniVentas;
 GO
-CREATE OR ALTER PROCEDURE seguridad.usp_ObtenerUsuarioLogin
+CREATE OR ALTER PROCEDURE seguridad.sp_ObtenerUsuarioLogin
     @nombre_usuario NVARCHAR(100)
 AS
 BEGIN
