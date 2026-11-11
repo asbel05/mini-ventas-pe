@@ -1,0 +1,90 @@
+﻿@{
+    var controllerActual = ViewContext.RouteData.Values["controller"]?.ToString() ?? "";
+}
+
+<aside class="sidebar" id="sidebarNav">
+    <div class="sidebar-header">
+        <div class="sidebar-logo text-primary fs-3">
+            <i class="bi bi-shop"></i>
+        </div>
+        <div>
+            <div class="sidebar-title">MiniVentas</div>
+        </div>
+    </div>
+
+    <nav class="sidebar-nav">
+        <ul class="nav flex-column">
+            <!-- Dashboard -->
+            <li class="nav-item">
+                <a class="nav-link @(controllerActual == "Home" ? "active" : "")" asp-controller="Home" asp-action="Index">
+                    <i class="bi bi-speedometer2"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+
+            <!-- Catálogos (con submenú) -->
+            <li class="nav-item has-submenu @(controllerActual == "Productos" || controllerActual == "Clientes" ? "open" : "")">
+                <a class="nav-link submenu-toggle @(controllerActual == "Productos" || controllerActual == "Clientes" ? "active" : "")" href="javascript:void(0);">
+                    <div class="d-flex align-items-center">
+                        <i class="bi bi-grid"></i>
+                        <span>Catálogos</span>
+                    </div>
+                    <i class="bi bi-chevron-down submenu-arrow"></i>
+                </a>
+                <ul class="submenu">
+                    <li>
+                        <a class="submenu-link @(controllerActual == "Productos" ? "active" : "")" asp-controller="Productos" asp-action="Index">
+                            <i class="bi bi-box-seam"></i>
+                            <span>Productos</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="submenu-link @(controllerActual == "Clientes" ? "active" : "")" asp-controller="Clientes" asp-action="Index">
+                            <i class="bi bi-people"></i>
+                            <span>Clientes</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- Ventas & Caja (con submenú) -->
+            <li class="nav-item has-submenu @(controllerActual == "Ventas" || controllerActual == "Comprobantes" ? "open" : "")">
+                <a class="nav-link submenu-toggle @(controllerActual == "Ventas" || controllerActual == "Comprobantes" ? "active" : "")" href="javascript:void(0);">
+                    <div class="d-flex align-items-center">
+                        <i class="bi bi-receipt-cutoff"></i>
+                        <span>Ventas & Caja</span>
+                    </div>
+                    <i class="bi bi-chevron-down submenu-arrow"></i>
+                </a>
+                <ul class="submenu">
+                    <li>
+                        <a class="submenu-link" href="javascript:void(0);">
+                            <i class="bi bi-cart-plus"></i>
+                            <span>Punto de Venta (POS)</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="submenu-link" href="javascript:void(0);">
+                            <i class="bi bi-clock-history"></i>
+                            <span>Historial de Ventas</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="submenu-link" href="javascript:void(0);">
+                            <i class="bi bi-file-earmark-check"></i>
+                            <span>Comprobantes (SUNAT)</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- Seguridad -->
+            <li class="nav-item">
+                <a class="nav-link @(controllerActual == "Usuarios" ? "active" : "")" href="javascript:void(0);">
+                    <i class="bi bi-shield-lock"></i>
+                    <span>Usuarios & Roles</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</aside>
