@@ -1,21 +1,45 @@
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Identity;
+using MiniVentas.Data;
+using MiniVentas.Models;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
+builder.Services.AddSingleton<ConexionBD>();
+builder.Services.AddScoped<UsuarioDao>();
+builder.Services.AddSingleton<IPasswordHasher<Usuario>, PasswordHasher<Usuario>>();
+
+builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+    .AddCookie(opciones =>
+    {
+        opciones.LoginPath = "/Acceso/IniciarSesion";
+        opciones.ExpireTimeSpan = TimeSpan.FromHours(8);
+    });
+
 var app = builder.Build();
+
+if (app.Environment.IsDevelopment())
+{
+    using var scope = app.Services.CreateScope();
+    var dao = scope.ServiceProvider.GetRequiredService<UsuarioDao>();
+    var hasher = scope.ServiceProvider.GetRequiredService<IPasswordHasher<Usuario>>();
+    await dao.AsegurarUsuarioAdmin(hasher);
+}
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
 
 app.UseHttpsRedirection();
 app.UseRouting();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapStaticAssets();
