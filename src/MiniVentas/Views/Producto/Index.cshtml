@@ -1,0 +1,149 @@
+@model MiniVentas.ViewModels.ProductoIndexViewModel
+@{
+    ViewData["Title"] = "Productos";
+}
+
+<div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mb-4">
+    <div>
+        <h3 class="fw-bold mb-1">Catálogo de Productos</h3>
+        <p class="text-muted small mb-0">Gestión de productos y precios de venta</p>
+    </div>
+    <a asp-action="Crear" class="btn btn-primary d-flex align-items-center gap-2">
+        <i class="bi bi-plus-lg"></i>
+        <span>Nuevo Producto</span>
+    </a>
+</div>
+
+@if (TempData["Exito"] != null)
+{
+    <div class="alert alert-success alert-dismissible fade show border-0 shadow-sm" role="alert">
+        @TempData["Exito"]
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
+    </div>
+}
+@if (TempData["Aviso"] != null)
+{
+    <div class="alert alert-warning alert-dismissible fade show border-0 shadow-sm" role="alert">
+        @TempData["Aviso"]
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
+    </div>
+}
+
+<div class="card border-0 shadow-sm mb-4">
+    <div class="card-body">
+        <form method="get" asp-action="Index" class="row g-2 align-items-end">
+            <div class="col-md-6">
+                <label asp-for="Busqueda" class="form-label small fw-semibold text-muted">Buscar por SKU o Nombre</label>
+                <div class="input-group">
+                    <span class="input-group-text bg-white"><i class="bi bi-search text-muted"></i></span>
+                    <input asp-for="Busqueda" class="form-control" />
+                </div>
+            </div>
+            <div class="col-md-3">
+                <label asp-for="SoloActivos" class="form-label small fw-semibold text-muted">Estado</label>
+                <select asp-for="SoloActivos" class="form-select">
+                    <option value="">Todos</option>
+                    <option value="true">Solo Activos</option>
+                    <option value="false">Solo Inactivos</option>
+                </select>
+            </div>
+            <div class="col-md-3 d-flex gap-2">
+                <button type="submit" class="btn btn-dark flex-grow-1">Filtrar</button>
+                @if (!string.IsNullOrEmpty(Model.Busqueda) || Model.SoloActivos != null)
+                {
+                    <a asp-action="Index" class="btn btn-secondary" title="Limpiar filtros">
+                        <i class="bi bi-x-lg"></i>
+                    </a>
+                }
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="card border-0 shadow-sm">
+    <div class="table-responsive">
+        <table class="table table-hover align-middle mb-0">
+            <thead class="table-light">
+                <tr>
+                    <th class="ps-4">SKU</th>
+                    <th>Producto</th>
+                    <th class="text-end">Precio Venta</th>
+                    <th class="text-center">Estado</th>
+                    <th class="text-end pe-4">Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model.Producto.Count == 0)
+                {
+                    <tr>
+                        <td colspan="5" class="text-center py-5 text-muted">
+                            <i class="bi bi-box-seam fs-2 d-block mb-2"></i>
+                            No se encontraron productos registrados.
+                        </td>
+                    </tr>
+                }
+                else
+                {
+                    @foreach (var item in Model.Producto)
+                    {
+                        <tr>
+                            <td class="ps-4">
+                                <span class="badge bg-secondary text-white font-monospace fs-6 px-3 py-2">@item.Sku</span>
+                            </td>
+                            <td class="fw-medium">@item.Nombre</td>
+                            <td class="text-end fw-semibold">S/ @item.PrecioVenta.ToString("N2")</td>
+                            <td class="text-center">
+                                @if (item.Activo)
+                                {
+                                    <span class="badge bg-success fs-6 px-3 py-2">Activo</span>
+                                }
+                                else
+                                {
+                                    <span class="badge bg-secondary fs-6 px-3 py-2">Inactivo</span>
+                                }
+                            </td>
+                            <td class="text-end pe-4">
+                                <div class="d-inline-flex gap-1">
+                                    <a asp-action="Editar" asp-route-id="@item.ProductoId"
+                                       class="btn btn-sm btn-primary" title="Editar">
+                                        <i class="bi bi-pencil"></i>
+                                    </a>
+
+                                    @if (item.Activo)
+                                    {
+                                        <form asp-action="CambiarEstado" method="post" class="d-inline form-desactivar">
+                                            <input type="hidden" name="id" value="@item.ProductoId" />
+                                            <input type="hidden" name="activo" value="false" />
+                                            <input type="hidden" name="busqueda" value="@Model.Busqueda" />
+                                            <input type="hidden" name="soloActivos" value="@(Model.SoloActivos?.ToString().ToLowerInvariant())" />
+                                            <button type="submit" class="btn btn-sm btn-danger" title="Desactivar">
+                                                <i class="bi bi-slash-circle"></i>
+                                            </button>
+                                        </form>
+                                    }
+                                    else
+                                    {
+                                        <form asp-action="CambiarEstado" method="post" class="d-inline">
+                                            <input type="hidden" name="id" value="@item.ProductoId" />
+                                            <input type="hidden" name="activo" value="true" />
+                                            <input type="hidden" name="busqueda" value="@Model.Busqueda" />
+                                            <input type="hidden" name="soloActivos" value="@(Model.SoloActivos?.ToString().ToLowerInvariant())" />
+                                            <button type="submit" class="btn btn-sm btn-success" title="Activar">
+                                                <i class="bi bi-check-circle"></i>
+                                            </button>
+                                        </form>
+                                    }
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="~/js/producto/index.js" asp-append-version="true"></script>
+}

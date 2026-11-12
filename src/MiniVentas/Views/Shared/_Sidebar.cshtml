@@ -23,8 +23,8 @@
             </li>
 
             <!-- Catálogos (con submenú) -->
-            <li class="nav-item has-submenu @(controllerActual == "Productos" || controllerActual == "Clientes" ? "open" : "")">
-                <a class="nav-link submenu-toggle @(controllerActual == "Productos" || controllerActual == "Clientes" ? "active" : "")" href="javascript:void(0);">
+            <li class="nav-item has-submenu @(controllerActual == "Producto" || controllerActual == "Clientes" ? "open" : "")">
+                <a class="nav-link submenu-toggle @(controllerActual == "Producto" || controllerActual == "Clientes" ? "active" : "")" href="javascript:void(0);">
                     <div class="d-flex align-items-center">
                         <i class="bi bi-grid"></i>
                         <span>Catálogos</span>
@@ -33,9 +33,9 @@
                 </a>
                 <ul class="submenu">
                     <li>
-                        <a class="submenu-link @(controllerActual == "Productos" ? "active" : "")" asp-controller="Productos" asp-action="Index">
+                        <a class="submenu-link @(controllerActual == "Producto" ? "active" : "")" asp-controller="Producto" asp-action="Index">
                             <i class="bi bi-box-seam"></i>
-                            <span>Productos</span>
+                            <span>Producto</span>
                         </a>
                     </li>
                     <li>
