@@ -79,12 +79,15 @@
             </li>
 
             <!-- Seguridad -->
-            <li class="nav-item">
-                <a class="nav-link @(controllerActual == "Usuarios" ? "active" : "")" href="javascript:void(0);">
-                    <i class="bi bi-shield-lock"></i>
-                    <span>Usuarios & Roles</span>
-                </a>
-            </li>
+            @if (User.IsInRole("ADMIN"))
+            {
+                <li class="nav-item">
+                    <a class="nav-link @(controllerActual == "Usuario" ? "active" : "")" asp-controller="Usuario" asp-action="Index">
+                        <i class="bi bi-shield-lock"></i>
+                        <span>Usuarios & Roles</span>
+                    </a>
+                </li>
+            }
         </ul>
     </nav>
 </aside>

@@ -1,0 +1,86 @@
+﻿@model MiniVentas.ViewModels.Usuarios.UsuarioFormViewModel
+@{
+    string titulo = Model.EsEdicion ? "Editar Usuario" : "Nuevo Usuario";
+    string accion = Model.EsEdicion ? "Editar" : "Crear";
+    ViewData["Title"] = titulo;
+}
+
+<div class="row justify-content-center">
+    <div class="col-12 col-md-8 col-lg-6">
+        <div class="mb-3">
+            <h4 class="fw-bold mb-0">@titulo</h4>
+        </div>
+
+        <div class="card border-0 shadow-sm">
+            <div class="card-body p-4">
+                <form asp-action="@accion" asp-route-id="@(Model.EsEdicion ? Model.UsuarioId : null)" method="post">
+                    <input type="hidden" asp-for="UsuarioId" />
+
+                    <div asp-validation-summary="ModelOnly" class="alert alert-danger py-2 small" role="alert"></div>
+
+                    <div class="row g-3 mb-3">
+                        <div class="col-md-6">
+                            <label asp-for="NombreUsuario" class="form-label fw-semibold"></label>
+                            <input asp-for="NombreUsuario" class="form-control text-lowercase" maxlength="100" autofocus />
+                            <span asp-validation-for="NombreUsuario" class="text-danger small"></span>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label asp-for="RolId" class="form-label fw-semibold"></label>
+                            <select asp-for="RolId" class="form-select">
+                                <option value="2">Vendedor</option>
+                                <option value="1">Administrador</option>
+                            </select>
+                            <span asp-validation-for="RolId" class="text-danger small"></span>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label asp-for="Nombre" class="form-label fw-semibold"></label>
+                        <input asp-for="Nombre" class="form-control" maxlength="120" />
+                        <span asp-validation-for="Nombre" class="text-danger small"></span>
+                    </div>
+
+                    <div class="mb-3">
+                        <label asp-for="Password" class="form-label fw-semibold">
+                            @(Model.EsEdicion ? "Nueva Contraseña (dejar en blanco para mantener la actual)" : "Contraseña")
+                        </label>
+                        <input asp-for="Password" class="form-control" maxlength="64" autocomplete="new-password" />
+                        <span asp-validation-for="Password" class="text-danger small"></span>
+                    </div>
+
+                    <hr class="my-4" />
+                    <h6 class="fw-bold mb-3">Perfil de Ventas</h6>
+
+                    <div class="row g-3 mb-4">
+                        <div class="col-md-5">
+                            <label asp-for="CodigoVendedor" class="form-label fw-semibold"></label>
+                            <input asp-for="CodigoVendedor" class="form-control text-uppercase" maxlength="24" />
+                            <span asp-validation-for="CodigoVendedor" class="text-danger small"></span>
+                        </div>
+
+                        <div class="col-md-7">
+                            <label asp-for="ZonaVentas" class="form-label fw-semibold"></label>
+                            <input asp-for="ZonaVentas" class="form-control text-uppercase" maxlength="80" />
+                            <span asp-validation-for="ZonaVentas" class="text-danger small"></span>
+                        </div>
+                    </div>
+
+                    <div class="mb-4">
+                        <div class="form-check form-switch">
+                            <input asp-for="Activo" class="form-check-input" role="switch" />
+                            <label asp-for="Activo" class="form-check-label fw-semibold"></label>
+                        </div>
+                    </div>
+
+                    <div class="d-flex justify-content-end gap-2">
+                        <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+                        <button type="submit" class="btn btn-primary px-4">
+                            <i class="bi bi-save me-1"></i>@(Model.EsEdicion ? "Actualizar Usuario" : "Guardar Usuario")
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
