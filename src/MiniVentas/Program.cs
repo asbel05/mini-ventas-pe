@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Identity;
 using MiniVentas.Data;
 using MiniVentas.Models;
+using MiniVentas.Security;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,12 +14,15 @@ builder.Services.AddScoped<UsuarioDao>();
 builder.Services.AddScoped<ProductoDao>();
 builder.Services.AddScoped<ClienteDao>();
 builder.Services.AddSingleton<IPasswordHasher<Usuario>, PasswordHasher<Usuario>>();
+builder.Services.AddScoped<ValidacionCookie>();
 
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
     .AddCookie(opciones =>
     {
         opciones.LoginPath = "/Acceso/IniciarSesion";
+        opciones.AccessDeniedPath = "/Acceso/Denegado";
         opciones.ExpireTimeSpan = TimeSpan.FromHours(8);
+        opciones.EventsType = typeof(ValidacionCookie);
     });
 
 var app = builder.Build();
@@ -50,6 +54,5 @@ app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}")
     .WithStaticAssets();
-
 
 app.Run();

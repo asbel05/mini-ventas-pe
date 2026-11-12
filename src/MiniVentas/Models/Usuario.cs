@@ -11,5 +11,7 @@
         public string RolCodigo { get; set; } = string.Empty;
         public string RolNombre { get; set; } = string.Empty;
         public int? VendedorId { get; set; }
+        public string? CodigoVendedor { get; set; }
+        public string? ZonaVentas { get; set; }
     }
 }

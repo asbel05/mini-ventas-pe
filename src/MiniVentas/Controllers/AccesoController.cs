@@ -5,8 +5,8 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using MiniVentas.Data;
 using MiniVentas.Models;
+using MiniVentas.Security;
 using MiniVentas.ViewModels.Acceso;
-using System.Security.Claims;
 
 namespace MiniVentas.Controllers
 {
@@ -14,11 +14,13 @@ namespace MiniVentas.Controllers
     {
         private readonly UsuarioDao _usuarioDao;
         private readonly IPasswordHasher<Usuario> _passwordHasher;
+
         public AccesoController(UsuarioDao usuarioDao, IPasswordHasher<Usuario> passwordHasher)
         {
             _usuarioDao = usuarioDao;
             _passwordHasher = passwordHasher;
         }
+
         [HttpGet]
         [AllowAnonymous]
         public IActionResult IniciarSesion(string? returnUrl = null)
@@ -29,6 +31,7 @@ namespace MiniVentas.Controllers
             }
             return View(new LoginViewModel { ReturnUrl = returnUrl });
         }
+
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
@@ -48,24 +51,13 @@ namespace MiniVentas.Controllers
                 ModelState.AddModelError(string.Empty, "Usuario o contraseña incorrectos.");
                 return View(modelo);
             }
-            var claims = new List<Claim>
-            {
-                new Claim(ClaimTypes.NameIdentifier, usuario.UsuarioId.ToString()),
-                new Claim(ClaimTypes.Name, usuario.NombreUsuario),
-                new Claim("NombreCompleto", usuario.Nombre),
-                new Claim(ClaimTypes.Role, usuario.RolCodigo)
-            };
-            if (usuario.VendedorId.HasValue)
-            {
-                claims.Add(new Claim("VendedorId", usuario.VendedorId.Value.ToString()));
-            }
-            var identidad = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
-            var principal = new ClaimsPrincipal(identidad);
+            var principal = SesionUsuario.CrearPrincipal(usuario);
             await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, principal);
             if (!string.IsNullOrEmpty(modelo.ReturnUrl) && Url.IsLocalUrl(modelo.ReturnUrl))
                 return Redirect(modelo.ReturnUrl);
             return RedirectToAction("Index", "Home");
         }
+
         [HttpPost]
         [Authorize]
         [ValidateAntiForgeryToken]
@@ -73,6 +65,13 @@ namespace MiniVentas.Controllers
         {
             await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
             return RedirectToAction("IniciarSesion", "Acceso");
+        }
+
+        [HttpGet]
+        [Authorize]
+        public IActionResult Denegado()
+        {
+            return View();
         }
     }
 }
