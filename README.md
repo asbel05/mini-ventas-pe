@@ -4,7 +4,7 @@ Sistema comercial para registrar pedidos, emitir boletas y facturas simuladas, c
 
 **Stack** · .NET 10, ASP.NET Core MVC con Razor, Bootstrap 5.3.8, JavaScript nativo, ADO.NET (`Microsoft.Data.SqlClient`) y SQL Server Developer en Docker.
 
-**Estado actual** · Base de datos, autenticación por cookies y módulos de catálogos (**Productos** y **Clientes** con Catálogo 06 SUNAT) implementados. Punto de venta (POS), facturación y despacho en progreso.
+**Estado actual** · Base de datos, autenticación con revalidación reactiva de sesiones (`CookieAuthenticationEvents`), módulos de catálogos (**Productos**, **Clientes** con Catálogo 06 SUNAT) y **Usuarios & Roles** (con asignación a vendedores) implementados. Punto de venta (POS), facturación y despacho en progreso.
 
 - [Diseño del sistema](docs/SDD.md)
 - [Diagrama editable](docs/erp-ventas-modelo.drawio)
@@ -23,7 +23,7 @@ docker compose up -d
 Esto levanta el contenedor `mini-ventas-sql` en el puerto `1433` con collation `Modern_Spanish_CI_AS`.
 
 ### 2. Ejecutar los scripts de base de datos
-Ejecuta los scripts de la carpeta `database/` en orden numérico (`01` al `07`):
+Ejecuta los scripts de la carpeta `database/` en orden numérico (`01` al `08`):
 
 **En PowerShell:**
 ```powershell
@@ -61,6 +61,6 @@ $env:ConnectionStrings__CadenaSql="Server=localhost,1433;Database=MiniVentas;Use
 dotnet run --project src/MiniVentas
 ```
 
-Al iniciar por primera vez, el sistema crea automáticamente el usuario administrador inicial si la tabla de usuarios está vacía:
+Al iniciar por primera vez, el sistema crea automáticamente el usuario administrador inicial si la tabla de usuarios está vacía (y lo vincula al perfil vendedor `VEN-ADMIN`):
 - **Usuario:** `admin`
-- **Contraseña:** `admin123`
+- **Contraseña:** `Admin123!`
