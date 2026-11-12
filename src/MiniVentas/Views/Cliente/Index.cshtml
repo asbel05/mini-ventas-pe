@@ -1,0 +1,125 @@
+@model MiniVentas.ViewModels.Clientes.ClienteIndexViewModel
+@{
+    ViewData["Title"] = "Clientes";
+}
+
+<div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mb-4">
+    <div>
+        <h3 class="fw-bold mb-1">Catálogo de Clientes</h3>
+    </div>
+    <a asp-action="Crear" class="btn btn-primary d-flex align-items-center gap-2">
+        <i class="bi bi-plus-lg"></i>
+        <span>Nuevo Cliente</span>
+    </a>
+</div>
+
+@if (TempData["Exito"] != null)
+{
+    <div class="alert alert-success alert-dismissible fade show border-0 shadow-sm" role="alert">
+        <i class="bi bi-check-circle-fill me-2"></i>@TempData["Exito"]
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
+    </div>
+}
+
+<div class="card border-0 shadow-sm mb-4">
+    <div class="card-body">
+        <form method="get" asp-action="Index" class="row g-2 align-items-end">
+            <div class="col-md-6">
+                <label asp-for="Busqueda" class="form-label small fw-semibold text-muted">Buscar por N° Documento o Nombre / Razón Social</label>
+                <div class="input-group">
+                    <span class="input-group-text bg-white"><i class="bi bi-search text-muted"></i></span>
+                    <input asp-for="Busqueda" class="form-control" />
+                </div>
+            </div>
+            <div class="col-md-3">
+                <label asp-for="TipoDocumento" class="form-label small fw-semibold text-muted">Tipo de Documento</label>
+                <select asp-for="TipoDocumento" class="form-select">
+                    <option value="">Todos</option>
+                    <option value="1">DNI</option>
+                    <option value="6">RUC</option>
+                    <option value="4">Carnet de Extranjería</option>
+                    <option value="7">Pasaporte</option>
+                </select>
+            </div>
+            <div class="col-md-3 d-flex gap-2">
+                <button type="submit" class="btn btn-dark flex-grow-1">Filtrar</button>
+                @if (!string.IsNullOrEmpty(Model.Busqueda) || !string.IsNullOrEmpty(Model.TipoDocumento))
+                {
+                    <a asp-action="Index" class="btn btn-secondary" title="Limpiar filtros">
+                        <i class="bi bi-x-lg"></i>
+                    </a>
+                }
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="card border-0 shadow-sm">
+    <div class="table-responsive">
+        <table class="table table-hover align-middle mb-0">
+            <thead class="table-light">
+                <tr>
+                    <th class="ps-4">Tipo</th>
+                    <th>N° Documento</th>
+                    <th>Nombre / Razón Social</th>
+                    <th class="text-center">Origen</th>
+                    <th class="text-end pe-4">Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model.Clientes.Count == 0)
+                {
+                    <tr>
+                        <td colspan="5" class="text-center py-5 text-muted">
+                            <i class="bi bi-people fs-2 d-block mb-2"></i>
+                            No se encontraron clientes registrados.
+                        </td>
+                    </tr>
+                }
+                else
+                {
+                    @foreach (var item in Model.Clientes)
+                    {
+                        <tr>
+                            <td class="ps-4">
+                                @if (item.TipoDocumento == "1")
+                                {
+                                    <span class="badge bg-primary">DNI</span>
+                                }
+                                else if (item.TipoDocumento == "6")
+                                {
+                                    <span class="badge bg-dark">RUC</span>
+                                }
+                                else if (item.TipoDocumento == "4")
+                                {
+                                    <span class="badge bg-info text-dark">CE</span>
+                                }
+                                else if (item.TipoDocumento == "7")
+                                {
+                                    <span class="badge bg-secondary">PASAPORTE</span>
+                                }
+                                else
+                                {
+                                    <span class="badge bg-light text-dark border">@item.TipoDocumentoNombre</span>
+                                }
+                            </td>
+                            <td>
+                                <span>@item.NumeroDocumento</span>
+                            </td>
+                            <td class="fw-medium">@item.Nombre</td>
+                            <td class="text-center">
+                                <span class="badge bg-secondary">@item.OrigenDatos</span>
+                            </td>
+                            <td class="text-end pe-4">
+                                <a asp-action="Editar" asp-route-id="@item.ClienteId"
+                                   class="btn btn-sm btn-primary" title="Editar">
+                                    <i class="bi bi-pencil"></i>
+                                </a>
+                            </td>
+                        </tr>
+                    }
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

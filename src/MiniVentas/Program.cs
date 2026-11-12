@@ -11,6 +11,7 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddSingleton<ConexionBD>();
 builder.Services.AddScoped<UsuarioDao>();
 builder.Services.AddScoped<ProductoDao>();
+builder.Services.AddScoped<ClienteDao>();
 builder.Services.AddSingleton<IPasswordHasher<Usuario>, PasswordHasher<Usuario>>();
 
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
