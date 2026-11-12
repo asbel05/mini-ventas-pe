@@ -1,11 +1,11 @@
-﻿using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using MiniVentas.Data;
 using MiniVentas.Models;
-using MiniVentas.ViewModels;
+using MiniVentas.ViewModels.Acceso;
 using System.Security.Claims;
 
 namespace MiniVentas.Controllers

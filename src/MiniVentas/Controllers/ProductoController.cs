@@ -2,7 +2,8 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using MiniVentas.Data;
 using MiniVentas.Models;
-using MiniVentas.ViewModels;
+using MiniVentas.Models.Enums;
+using MiniVentas.ViewModels.Productos;
 
 namespace MiniVentas.Controllers
 {
@@ -31,15 +32,16 @@ namespace MiniVentas.Controllers
         [HttpGet]
         public IActionResult Crear()
         {
-            return View("Formulario", new ProductoViewModel { Activo = true });
+            return View("Formulario", new ProductoFormViewModel { Activo = true });
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Crear(ProductoViewModel modelo)
+        public async Task<IActionResult> Crear(ProductoFormViewModel modelo)
         {
             if (!ModelState.IsValid)
                 return View("Formulario", modelo);
+
             var producto = new Producto
             {
                 Sku = modelo.Sku,
@@ -47,12 +49,14 @@ namespace MiniVentas.Controllers
                 PrecioVenta = modelo.PrecioVenta,
                 Activo = modelo.Activo
             };
+
             var resultado = await _productoDao.Crear(producto);
             if (resultado == ResultadoOperacionProducto.SkuDuplicado)
             {
                 ModelState.AddModelError(nameof(modelo.Sku), "El código SKU ya se encuentra registrado en otro producto.");
                 return View("Formulario", modelo);
             }
+
             TempData["Exito"] = $"Producto \"{producto.Nombre.Trim()}\" creado correctamente.";
             return RedirectToAction(nameof(Index));
         }
@@ -63,7 +67,8 @@ namespace MiniVentas.Controllers
             var producto = await _productoDao.ObtenerPorId(id);
             if (producto == null)
                 return NotFound();
-            var modelo = new ProductoViewModel
+
+            var modelo = new ProductoFormViewModel
             {
                 ProductoId = producto.ProductoId,
                 Sku = producto.Sku,
@@ -76,12 +81,14 @@ namespace MiniVentas.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Editar(int id, ProductoViewModel modelo)
+        public async Task<IActionResult> Editar(int id, ProductoFormViewModel modelo)
         {
             if (id != modelo.ProductoId)
                 return BadRequest();
+
             if (!ModelState.IsValid)
                 return View("Formulario", modelo);
+
             var producto = new Producto
             {
                 ProductoId = modelo.ProductoId,
@@ -90,14 +97,17 @@ namespace MiniVentas.Controllers
                 PrecioVenta = modelo.PrecioVenta,
                 Activo = modelo.Activo
             };
+
             var resultado = await _productoDao.Actualizar(producto);
             if (resultado == ResultadoOperacionProducto.NoEncontrado)
                 return NotFound();
+
             if (resultado == ResultadoOperacionProducto.SkuDuplicado)
             {
                 ModelState.AddModelError(nameof(modelo.Sku), "El código SKU ya pertenece a otro producto.");
                 return View("Formulario", modelo);
             }
+
             TempData["Exito"] = $"Producto \"{producto.Nombre.Trim()}\" actualizado correctamente.";
             return RedirectToAction(nameof(Index));
         }
@@ -109,6 +119,7 @@ namespace MiniVentas.Controllers
             bool actualizado = await _productoDao.CambiarEstado(id, activo);
             if (!actualizado)
                 return NotFound();
+
             if (activo)
             {
                 TempData["Exito"] = "Producto activado correctamente.";

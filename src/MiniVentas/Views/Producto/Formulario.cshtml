@@ -1,4 +1,4 @@
-@model MiniVentas.ViewModels.ProductoViewModel
+@model MiniVentas.ViewModels.Productos.ProductoFormViewModel
 @{
     string titulo = Model.EsEdicion ? "Editar Producto" : "Nuevo Producto";
     string accion = Model.EsEdicion ? "Editar" : "Crear";
@@ -20,7 +20,7 @@
 
                     <div class="mb-3">
                         <label asp-for="Sku" class="form-label fw-semibold"></label>
-                        <input asp-for="Sku" class="form-control text-uppercase font-monospace" maxlength="32" autofocus />
+                        <input asp-for="Sku" class="form-control text-uppercase" maxlength="32" autofocus />
                         <span asp-validation-for="Sku" class="text-danger small"></span>
                     </div>
 

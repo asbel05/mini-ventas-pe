@@ -1,4 +1,4 @@
-@model MiniVentas.ViewModels.ProductoIndexViewModel
+@model MiniVentas.ViewModels.Productos.ProductoIndexViewModel
 @{
     ViewData["Title"] = "Productos";
 }
@@ -6,7 +6,6 @@
 <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mb-4">
     <div>
         <h3 class="fw-bold mb-1">Catálogo de Productos</h3>
-        <p class="text-muted small mb-0">Gestión de productos y precios de venta</p>
     </div>
     <a asp-action="Crear" class="btn btn-primary d-flex align-items-center gap-2">
         <i class="bi bi-plus-lg"></i>
@@ -88,18 +87,18 @@
                     {
                         <tr>
                             <td class="ps-4">
-                                <span class="badge bg-secondary text-white font-monospace fs-6 px-3 py-2">@item.Sku</span>
+                                @item.Sku
                             </td>
                             <td class="fw-medium">@item.Nombre</td>
                             <td class="text-end fw-semibold">S/ @item.PrecioVenta.ToString("N2")</td>
                             <td class="text-center">
                                 @if (item.Activo)
                                 {
-                                    <span class="badge bg-success fs-6 px-3 py-2">Activo</span>
+                                    <span class="badge bg-success">Activo</span>
                                 }
                                 else
                                 {
-                                    <span class="badge bg-secondary fs-6 px-3 py-2">Inactivo</span>
+                                    <span class="badge bg-secondary">Inactivo</span>
                                 }
                             </td>
                             <td class="text-end pe-4">

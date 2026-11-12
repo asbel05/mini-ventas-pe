@@ -1,15 +1,10 @@
 using Microsoft.Data.SqlClient;
 using MiniVentas.Models;
+using MiniVentas.Models.Enums;
 using System.Data;
 
 namespace MiniVentas.Data
 {
-    public enum ResultadoOperacionProducto
-    {
-        Exito,
-        SkuDuplicado,
-        NoEncontrado
-    }
     public class ProductoDao
     {
         private readonly ConexionBD _conexion;

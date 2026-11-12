@@ -1,6 +1,6 @@
-﻿using MiniVentas.Models;
+using MiniVentas.Models;
 
-namespace MiniVentas.ViewModels
+namespace MiniVentas.ViewModels.Productos
 {
     public class ProductoIndexViewModel
     {
@@ -9,3 +9,4 @@ namespace MiniVentas.ViewModels
         public List<Producto> Producto { get; set; } = [];
     }
 }
+
