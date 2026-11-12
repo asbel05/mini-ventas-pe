@@ -46,7 +46,7 @@ namespace MiniVentas.Controllers
             {
                 Sku = modelo.Sku,
                 Nombre = modelo.Nombre,
-                PrecioVenta = modelo.PrecioVenta,
+                PrecioVenta = modelo.PrecioVenta!.Value,
                 Activo = modelo.Activo
             };
 
@@ -94,7 +94,7 @@ namespace MiniVentas.Controllers
                 ProductoId = modelo.ProductoId,
                 Sku = modelo.Sku,
                 Nombre = modelo.Nombre,
-                PrecioVenta = modelo.PrecioVenta,
+                PrecioVenta = modelo.PrecioVenta!.Value,
                 Activo = modelo.Activo
             };
 
@@ -114,13 +114,16 @@ namespace MiniVentas.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> CambiarEstado(int id, bool activo, string? busqueda, bool? soloActivos)
+        public async Task<IActionResult> CambiarEstado(int id, bool? activo, string? busqueda, bool? soloActivos)
         {
-            bool actualizado = await _productoDao.CambiarEstado(id, activo);
+            if (id <= 0 || activo is null || !ModelState.IsValid)
+                return BadRequest();
+
+            bool actualizado = await _productoDao.CambiarEstado(id, activo.Value);
             if (!actualizado)
                 return NotFound();
 
-            if (activo)
+            if (activo.Value)
             {
                 TempData["Exito"] = "Producto activado correctamente.";
             }

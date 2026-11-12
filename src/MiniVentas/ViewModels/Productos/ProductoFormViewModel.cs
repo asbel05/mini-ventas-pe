@@ -17,9 +17,9 @@ namespace MiniVentas.ViewModels.Productos
         public string Nombre { get; set; } = string.Empty;
 
         [Required(ErrorMessage = "El precio de venta es obligatorio.")]
-        [Range(0.00, 99999999.99, ErrorMessage = "El precio debe ser mayor o igual a 0.00.")]
+        [Range(0.10, 99999999.99, ErrorMessage = "El precio de venta debe ser al menos S/ 0.10.")]
         [Display(Name = "Precio de Venta (S/)")]
-        public decimal PrecioVenta { get; set; }
+        public decimal? PrecioVenta { get; set; }
 
         [Display(Name = "Producto activo")]
         public bool Activo { get; set; } = true;

@@ -1,14 +1,6 @@
 USE MiniVentas;
 GO
 
-IF NOT EXISTS (SELECT 1 FROM sys.check_constraints WHERE name = 'CK_CLIENTE_tipo_documento')
-BEGIN
-    ALTER TABLE ventas.CLIENTE
-    ADD CONSTRAINT CK_CLIENTE_tipo_documento 
-    CHECK (tipo_documento IN ('0', '1', '4', '6', '7'));
-END
-GO
-
 IF NOT EXISTS (SELECT 1 FROM ventas.CLIENTE WHERE tipo_documento = '0' AND numero_documento = '00000000')
 BEGIN
     INSERT INTO ventas.CLIENTE (tipo_documento, numero_documento, nombre, origen_datos, consultado_en)
@@ -73,6 +65,9 @@ AS
 BEGIN
     SET NOCOUNT ON;
 
+    IF @tipo_documento NOT IN ('1', '4', '6', '7')
+        THROW 50001, 'El tipo de documento no es válido para el registro de clientes.', 1;
+
     SET @numero_documento = UPPER(TRIM(@numero_documento));
     SET @nombre = UPPER(TRIM(@nombre));
 
@@ -91,6 +86,9 @@ CREATE OR ALTER PROCEDURE ventas.sp_ActualizarCliente
 AS
 BEGIN
     SET NOCOUNT ON;
+
+    IF @tipo_documento NOT IN ('1', '4', '6', '7')
+        THROW 50001, 'El tipo de documento no es válido para la edición de clientes.', 1;
 
     SET @numero_documento = UPPER(TRIM(@numero_documento));
     SET @nombre = UPPER(TRIM(@nombre));

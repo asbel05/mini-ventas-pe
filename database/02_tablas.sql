@@ -42,7 +42,11 @@ BEGIN
         origen_datos VARCHAR(12) NOT NULL, -- MANUAL, RENIEC, SUNAT, VENTA_DIRECTA
         consultado_en DATETIME2 NULL,
         CONSTRAINT PK_CLIENTE PRIMARY KEY (cliente_id),
-        CONSTRAINT UQ_CLIENTE_documento UNIQUE (tipo_documento, numero_documento)
+        CONSTRAINT UQ_CLIENTE_documento UNIQUE (tipo_documento, numero_documento),
+        CONSTRAINT CK_CLIENTE_tipo_documento CHECK (
+            (tipo_documento = '0' AND numero_documento = '00000000' AND nombre = N'CLIENTES VARIOS')
+            OR tipo_documento IN ('1', '4', '6', '7')
+        )
     );
 END
 GO
@@ -72,7 +76,7 @@ BEGIN
         activo BIT NOT NULL CONSTRAINT DF_PRODUCTO_activo DEFAULT (1),
         CONSTRAINT PK_PRODUCTO PRIMARY KEY (producto_id),
         CONSTRAINT UQ_PRODUCTO_sku UNIQUE (sku),
-        CONSTRAINT CK_PRODUCTO_precio CHECK (precio_venta >= 0)
+        CONSTRAINT CK_PRODUCTO_precio CHECK (precio_venta >= 0.10)
     );
 END
 GO

@@ -9,7 +9,7 @@ namespace MiniVentas.ViewModels.Clientes
 
         [Required(ErrorMessage = "Seleccione el tipo de documento.")]
         [Display(Name = "Tipo de Documento")]
-        public string TipoDocumento { get; set; } = "1";
+        public string TipoDocumento { get; set; } = string.Empty;
 
         [Required(ErrorMessage = "El número de documento es obligatorio.")]
         [StringLength(12, ErrorMessage = "El documento no puede superar los 12 caracteres.")]
